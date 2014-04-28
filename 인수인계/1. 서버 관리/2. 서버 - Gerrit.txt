@@ -1,0 +1,9 @@
+서버에 Test용 Gerrit이 설치되어 있습니다.
+
+http://10.177.234.48:8900/#/
+
+
+=== 스타트 방법 ===
+
+cd /cm_storage/gerrit_site
+sudo ./bin/gerrit.sh restart

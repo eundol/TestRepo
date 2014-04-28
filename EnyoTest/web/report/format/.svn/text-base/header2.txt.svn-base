@@ -1,0 +1,29 @@
+
+<p class='description'>Execute Enyo API Test with merged test app and test script automatically.</p>
+</div>
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td align='center'>Count</td>
+    <td align='center'>Pass</td>
+    <td align='center'>Fail</td>
+    <td align='center'>Error</td>
+    <td align='center'>View</td>
+    <td align='center'>duration</td>
+</tr>

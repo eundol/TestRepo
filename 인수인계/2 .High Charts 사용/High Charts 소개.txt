@@ -1,0 +1,16 @@
+제가 구축한 모든 차트는 High Charts를 사용하였습니다.
+
+기관에서 사용시 유료이고 라이센스 구매하였습니다. (1서버 1개발자 라이센스) - 폴더 첨부
+
+=== 관련 URL ===
+
+공식사이트 : http://www.highcharts.com/
+API : http://api.highcharts.com/highcharts
+Demo : http://www.highcharts.com/demo/
+
+사용법은 Demo를 보시면 금방 코드가 이해가 될 것이고 필요한 경우 API를 참고하시면 됩니다.
+저는 Servlet -> JSP를 이용하여 데이터를 받고 차트 스크립트 안에 값을 넣어 동적 차트로 구현하였습니다.
+
+Dashboard 구축가이드에 HighCharts에 대한 간단한 사용법이 있으니 참고하십시요.(예전 LG전자 인턴이 작성하고 감)
+Dashboard 구축가이드 링크 :
+http://collab.lge.com/main/download/attachments/135875017/Dashboard%EA%B5%AC%EC%B6%95%EA%B0%80%EC%9D%B4%EB%93%9C.doc

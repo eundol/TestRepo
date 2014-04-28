@@ -1,0 +1,131 @@
+URL : http://10.177.234.48/w2  DB : W2_Dashboard
+
+프로젝트가 W2DashBoard(/w2) , W2DashBoard-Luna(/w2/luna) 로 나뉘어 있습니다.
+
+W2 대쉬보드는 원래 독자적인 웹페이지로 개발하려고 했습니다.
+http://10.177.234.48/w2/ 에 들어가시면 껍데기를 보실수 있습니다. ㅎ
+(참고로 메뉴 디자인은 http://www.iconarchive.com/ 란 사이트를 참고로 만든 것인데
+여기에 아이콘들이 많이 있어서 자주 들어가는 페이지 입니다)
+
+현재는 주로 Wiki 페이지에 Iframe으로 들어가는 차트를 그려서 URL을 드리는 형태로 사용되고 있습니다.
+일부는 사용자가 업데이트하지만 나머지는 수동으로 업데이트해줘야 하므로 하나씩 설명 드리겠습니다.
+
+
+크게 BAT, 퍼포먼스, 시스템, 정적분석, Garnet, Luna 차트로 나뉘어집니다.
+==============================================
+
+1. 
+http://10.177.234.48/w2/bat_summary_bar_chart
+BAT Result 차트입니다.
+http://10.177.234.48/w2/bat_summary_bar_chart?count=5
+이런식으로 count에 값을 주면 해당하는 만큼만 그려집니다.
+combination chart를 활용하여 bar차트에 line차트까지 표시하였습니다.
+관련 위키 페이지는 http://collab.lge.com/main/display/CCWMP/BAT+Results 입니다.
+
+차트의 오른쪽 하단 Edit를 클릭하면 데이터를 삭제, 입력할 수있는 팝업이 뜨도록 하였습니다. (사용자가 입력할 수 있게)
+
+2. 
+http://10.177.234.48/w2/perf_booting_time_line_chart
+퍼포먼스 테스트의 부팅타임 차트입니다. 
+W2_Dashboard 데이타베이스의 TB_Perf_Result 와 TB_Perf_Image 테이블과 연관이 있습니다.
+단, 이부분은 아직 매뉴얼로 데이터를 조작해주어야 합니다 ㅠㅠㅠㅠ
+TB_Perf_Image 테이블에 Image 정보를 등록하고 TB_Perf_Result 테이블에 데이터를 입력해야 합니다. 
+관련 위키 페이지는 http://collab.lge.com/main/display/CCWMP/Booting_AppLaunch+Time 입니다
+위키 페이지보고 데이터를 입력해주면 됩니다.
+
+3.
+http://10.177.234.48/w2/perf_luanch_time_line_chart
+퍼포먼스 테스트의 앱 런치타임 차트입니다.
+2번 차트와 동일합니다.(관련 위키도 똑같습니다) 메뉴얼로 데이터를 조작해주어야 합니다 ㅠㅠㅠㅠ
+
+4.
+http://10.177.234.48/w2/static_dencity_line_chart
+정적분석의 Dencity 차트입니다.
+이 데이터도 매뉴얼로 조작해야하는데 용호대리님이 해주고 계십니다. ^^
+관련 위키 : http://collab.lge.com/main/display/CCWMP/Static+Analysis+for+W2
+
+5.
+http://10.177.234.48/w2/static_defect_line_chart
+정적분석의 Defect 차트입니다.
+이 데이터도 매뉴얼로 조작해야하는데 용호대리님이 해주고 계십니다. ^^
+관련 위키 : http://collab.lge.com/main/display/CCWMP/Static+Analysis+for+W2
+
+6.
+http://10.177.234.48/w2/system/system_summary_bar.jsp
+시스템 테스트 차트 입니다.
+이 데이터는 서블릿이 아예 없습니다. (즉, DB 구현이 안되어 있습니다....)
+코드에서 데이터를 바꾸어 주셔야 합니다....ㅠ 
+
+xAxis: {
+            categories: [
+                'Home',
+                'Call',
+                'Settings',
+                'Message',
+                'Gallery',
+                'Music',
+                'IME',
+                'Contact',
+                'Clock',
+                'VoiceMemo',
+                'Wi-Fi',
+                'Calendar',
+                'Bluetooth',
+                'Quick Settings'
+             ],
+
+X축은 이 코드를 바꾸시면 되고 순서에 맞게
+
+series: [
+        // first stack 
+		{
+		    name: 'Fail',
+		    data: [ 25, 26, 43, 39, 8, 31, 0, 50, 8, 12, 19, 5, 12, 0],
+		    color: Highcharts.getOptions().colors[2]
+		}, {
+		    name: 'Pass',
+		    data: [ 16, 37, 14, 23, 20, 15, 9, 30, 44, 15, 5, 24, 8, 1],
+		    color: Highcharts.getOptions().colors[0]
+		}
+
+Fail과 Pass 값을 각각 넣어주시면 됩니다
+
+관련 위키 : http://collab.lge.com/main/display/CCWMP/System+Test+Results
+
+7. 
+http://10.177.234.48/w2/garnet/garnet_summary_bar.jsp
+가넷 API의 bar 차트입니다.
+이 차트도 코드에 직접 수정해야합니다.
+6번 차트 참고하셔서 변경하시면 될 것같습니다. (코드 보시면 바로 이해 될 듯..)
+
+관련 위키 : http://collab.lge.com/main/display/CCWMP/Garnet+component+Test+Results
+
+8. 
+http://10.177.234.48/w2/garnet/garnet_resolution_pie.jsp
+가넷 API의 Pie 차트입니다.
+이 차트도 코드에 직접 수정해야합니다.
+
+data: [
+	{name: 'Fixed', y: 11, sliced: true, selected: true},
+	['Won\'t Fix', 4]
+],
+
+이 부분에 숫자 부분만 변경하시면 됩니다.
+
+관련 위키 : 7번과 동일
+
+9.
+http://10.177.234.48/w2/luna/charts/luna_resolution_pie.jsp
+이제 Luna 차트들 입니다. 말씀 드렸다시피 별도의 프로젝트에 있는점 유의하셔야 합니다.
+(다만... 현재 지금 차트들을 사용하지 않는것 같습니다... 까인듯...)
+관련 위키는 http://collab.lge.com/main/display/CCWMP/Luna+API+Test+Results 인데 지금은 차트들이 모두 빠져있네요.
+루나 차트도 모두 코드에 직접 수정하셔야 합니다.
+
+10.
+http://10.177.234.48/w2/luna/charts/luna_module_bar.jsp
+루나 bar 차트입니다. 앞의 차트사용법과 동일합니다.
+
+11.
+http://10.177.234.48/w2/luna/charts/luna_summary_pie.jsp
+루나 pie 차트입니다. 2 뎁스의 파이를 표현하였습니다.
+코드를 보시면 바로 이해가 되실 것 같습니다.

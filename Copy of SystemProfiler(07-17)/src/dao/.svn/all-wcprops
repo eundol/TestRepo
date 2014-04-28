@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/InternDev/!svn/ver/595/SystemProfiler/src/dao
+END
+MemDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/InternDev/!svn/ver/595/SystemProfiler/src/dao/MemDao.java
+END
+BoardDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/InternDev/!svn/ver/493/SystemProfiler/src/dao/BoardDao.java
+END
+IoDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/InternDev/!svn/ver/607/SystemProfiler/src/dao/IoDao.java
+END
+CpuDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/InternDev/!svn/ver/607/SystemProfiler/src/dao/CpuDao.java
+END
+CommonDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/InternDev/!svn/ver/581/SystemProfiler/src/dao/CommonDao.java
+END

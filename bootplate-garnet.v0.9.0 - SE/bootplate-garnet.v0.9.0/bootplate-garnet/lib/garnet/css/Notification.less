@@ -1,0 +1,42 @@
+/* Notification.css */
+
+.g-notification {
+	position: absolute;
+	overflow: hidden;
+	pointer-events: none;
+}
+.g-notification .g-drawer-container {
+	height: 103px;
+	overflow: hidden;
+}
+.g-notification .g-drawer-content {
+	position: absolute;
+	height: 103px;
+	pointer-events: auto;
+	color: @g-default-font-color;
+}
+.g-notification .g-notification-icon {
+	display: block;
+	width: 48px;
+	height: 48px;
+	margin: 8px auto 10px;
+}
+.g-notification .g-notification-title {
+	width: 150px;
+	margin: 0 85px;
+	font-size: @g-notification-content-font-size;
+	overflow: hidden;
+	text-overflow: clip;
+	-webkit-mask-image: -webkit-linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,1) 86%, rgba(0,0,0,0));
+	-webkit-mask-image: linear-gradient(left, rgba(0,0,0,1), rgba(0,0,0,1) 86%, rgba(0,0,0,0));
+}
+.g-notification .g-notification-scrim {
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	left: 0;
+	top: 0;
+	background-color: #000000;
+	opacity: 0.94;
+	pointer-events: auto;
+}

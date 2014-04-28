@@ -1,0 +1,106 @@
+/* TimePickerPanel.css */
+
+.g-time-picker-panel {
+	position: relative;
+	border-radius: 50%;
+	background-color: #000000;
+}
+.g-time-picker-panel .g-knob-container {
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+}
+.g-time-picker-panel .g-knob-body {
+	opacity: 0.5;
+}
+.g-time-picker-panel .g-knob-body.g-big-dot {
+	margin-top: -10px;
+}
+.g-time-picker-panel .g-hour-text {
+	position: absolute;
+	width: 80px;
+	height: 70px;
+	line-height: 70px;
+	color: @g-default-font-color;
+	left: 23%;
+	top: 27%;
+	font-size: @g-time-picker-current-hour-min-font-size;
+}
+.g-time-picker-panel .g-hour-text.active {
+	color: @g-wheel-section-list-sction-font-color;
+}
+.g-time-picker-panel .g-colon-text {
+	position: absolute;
+	width: 80px;
+	height: 70px;
+	line-height: 70px;
+	color: @g-default-font-color;
+	left: 47%;
+	top: 27%;
+	font-size: @g-time-picker-current-hour-min-font-size;
+}
+.g-time-picker-panel .g-minute-text {
+	position: absolute;
+	width: 80px;
+	height: 70px;
+	line-height: 70px;
+	color: @g-default-font-color;
+	right: 22%;
+	top: 27%;
+	font-size: @g-time-picker-current-hour-min-font-size;
+}
+.g-time-picker-panel .g-minute-text.active {
+	color: @g-wheel-section-list-sction-font-color;
+}
+.g-time-picker-panel .g-meridiem-text {
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	color: @g-wheel-section-list-meridiem-font-color;
+	left: 43%;
+	bottom: 40%;
+	font-size: @g-time-picker-meridiem-font-size;
+}
+.g-time-picker-panel .g-ok-image {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	right: 24%;
+	bottom: 18%;
+	background: @g-icon-done no-repeat;
+}
+.g-time-picker-panel .g-cancel-image {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	left: 24%;
+	bottom: 18%;
+	background: @g-icon-close no-repeat;
+}
+.g-time-picker-panel .g-hour-label {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: @g-time-picker-hour-min-font-size;
+	text-align: center;
+}
+.g-time-picker-panel .g-minute-label {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	font-size: @g-time-picker-hour-min-font-size;
+	text-align: center;
+}
+.g-time-picker-panel .g-dot-label {
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	margin: 22px;
+	line-height: 50px;
+	background-color: #494949;
+	border-radius: 50%;
+	text-align: center;
+}

@@ -1,0 +1,43 @@
+10
+
+dir
+403
+http://heesungeun-pc01.lge.net/svn/InternDev/DashBoard/src
+http://heesungeun-pc01.lge.net/svn/InternDev
+
+
+
+2013-04-02T06:32:12.022458Z
+344
+soyoung.yoon
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+9985bd78-3577-a044-8dbd-77172b7d84a7
+
+biz
+dir
+
+common
+dir
+
+controller
+dir
+
+dao
+dir
+
+entity
+dir
+

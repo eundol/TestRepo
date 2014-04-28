@@ -1,0 +1,7 @@
+http://10.177.234.48/Garnet/bootplate-garnet/source/GarnetTest.html
+
+테스트 앱을 웹에 띄워 놓았습니다. (wiki페이지에서 사용중)
+
+생각 나실때마다 이클립스에서 기존 bootplate를 지우고 새 bootplate를 복사하시면 업데이트 하실수 있습니다.
+
+형상관리로 관리할 수도 있는데 훨씬 느려져서 그냥 파일서버 통해서 복사 > 붙여넣기 하였습니다. ^^

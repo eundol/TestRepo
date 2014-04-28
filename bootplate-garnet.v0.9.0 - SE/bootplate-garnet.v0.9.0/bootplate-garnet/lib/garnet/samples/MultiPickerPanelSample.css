@@ -1,0 +1,7 @@
+/* MultiPickerPanelSample.css */
+
+.g-picker-item{
+	height: 80px;
+	line-height: 80px;
+	position: relative; /* Do not omit this. It's critical */
+}

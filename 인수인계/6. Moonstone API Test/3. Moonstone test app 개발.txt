@@ -1,0 +1,5 @@
+현재 문스톤은 추가개발이 진행되지 않는 상태이므로 중요도는 떨어지나 혹시라도 참고가 되실수 있으니...
+
+위키 : http://collab.lge.com/main/display/RCRTP/Test+App+-+Template
+
+위키에 자세하게 설명되어 있습니다. 

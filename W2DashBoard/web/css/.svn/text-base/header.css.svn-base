@@ -1,0 +1,17 @@
+@CHARSET "UTF-8";
+
+/* header */
+.header {
+	
+}
+.header-container{
+	position: relative;
+	margin-right: 10%;
+	margin-left: 1%;
+	width: 1050px;
+	z-index: 1;
+}
+#title-image{
+	margin: 5px 0 5px 2px;
+	float: left;
+}

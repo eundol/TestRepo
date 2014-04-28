@@ -1,0 +1,28 @@
+Garnet API Test 위키 : http://collab.lge.com/main/display/RCRTP/III.+%5BW2%5D+Garnet+component+Test
+
+Garnet은 WD App 개발에 사용되는 UI 라이브러리 입니다. (현재 버전 0.9.1)
+여러 컴포넌트(Button, Loading, Wheel 등등... )로 구성되며 각각의 옵션에 따른 컴포넌트의 동작을 테스트하게 됩니다.
+
+UI 라이브러리이다 보니 실제로 타겟(시계)에서 어떻게 그려지는지 판단해야하므로 테스트앱을 먼저 개발합니다.(Enyo 앱)
+테스트앱이 완성되면 테스트 케이스를 작성하게 됩니다.(엑셀 이용)
+작성된 테스트케이스를 바탕으로 자동화 스크립트를 개발합니다.(파이썬 이용)
+
+저는 테스트 앱 template(Button)과 
+Loading, Notification, Scroller, Title, Toast, WheelPicker, WheelPickerController, WheelSectionListController 컴포넌트를 담당하였습니다.
+
+라이브러리가 개발 중에 있고 property(옵션)이 빈번히 변경되기 때문에 Garnet이 업데이트 될 때마다 담당 컴포넌트를 확인하고 있습니다.
+(컴포넌트에 따라 property가 없어 테스트가 필요하지 않은 것이 있을 수 있습니다.)
+
+컴포넌트의 property는 
+
+published, public, function, protected 로 구분됩니다.
+
+published : 앱 개발자들이 자유롭게 이용 할 수 있도록 set, get Method가 지원되는 property, 컴포넌트 렌더링 이후에도 옵션 변경이 가능 (즉, 동적으로 변경할 수 있음)
+public : 공개된 property 지만 렌더링 이후에는 옵션 변경이 불가 (최초 렌더링 시에만 지원)
+function : 컴포넌트가 내장하고 있는 함수
+protected : 공개되지 않은 property (테스트 대상이 아님)
+
+property는 코드에서 확인하셔도 되고 아니면 bootplate마다 포함된 api-viewer로 보실수도 있습니다.
+(bootplate-garnet\tools\api\garnet\index.html)
+
+제가 코드 파씽해서 디비로 관리하는 자바 프로그램을 만들어 두긴 했는데 지금은 사용안하고 있습니다.

@@ -1,0 +1,11 @@
+URL : http://profilevu.lge.com/dashboard/ DB : gerrit_infra_test
+
+2013년 2월부터 약 3개월간 Gerrit DB를 활용하여 구축한 페이지입니다.
+처음이다보니 context도 dashboard이고 미숙한 점이 많이 있습니다.
+
+css는 bootstrap을 약간 적용하였고
+차트는 하이차트.. 나머지는 전부 날 html, jsp, js, css 입니다.
+
+기존에 있던 Gerrit DB를 분석해 쿼리를 작성하는 것이 어려웠던것 같습니다. 관련 쿼리는 별도 폴더에 모아두었습니다. (Query참고)
+
+태순씨도 관리를 하셨기 때문에 Dashboard 쪽은 잘 하실거라고 생각합니다 ^.~

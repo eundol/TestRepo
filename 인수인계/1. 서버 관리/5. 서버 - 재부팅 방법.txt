@@ -1,0 +1,18 @@
+현재 서버의 우분투가 불안정한 관계로 정상적인 부팅이 제한되고 아래 절차대로 하셔야 합니다.
+
+
+1. 부팅 후 F2키를 눌러 복구모드로 들어갑니다. (seadmin / multisqe)
+
+2. 프롬포트 상태에서 1~2분 대기하면 GUI 화면으로 전환됩니다. 다시 비밀번호를 입력합니다 (multisqe)
+
+3. 커맨드 창을 띄워 sudo vi /etc/resolv.conf 파일에 nameserver 156.147.135.180 을 추가해줍니다. 
+   sudo /etc/init.d/networking restart 로 네트워크를 재시작합니다.
+   (이 후 인터넷이 되는지 확인합니다)
+
+4. cd /cm_storage/gerrit_site
+   sudo ./bin/gerrit.sh restart 
+   (pw : multisqe)
+   을 통해 gerrit과 mysql서버를 구동시킵니다.
+
+5. 이클립스를 실행시킵니다. (/home/seadmin 에 있습니다)
+   이크립스 하단 server 탭의 tomcat 서버를 스타트 시킵니다. (서버 - 이클립스.txt 참고)

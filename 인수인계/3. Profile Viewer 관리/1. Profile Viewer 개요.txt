@@ -1,0 +1,21 @@
+Profile Viewer는 2013년 4월 중순부터 8월까지 약 3개월 반정도 진행된 프로젝트였습니다.
+
+Profile Viewer : http://profilevu.lge.com/
+Profile Viewer Guide : http://collab.lge.com/main/pages/viewpage.action?pageId=157249528
+
+CPU, Memory, I/O 사용현황을 여러 리눅스 툴을 이용해 추출한 후 그 raw data를 parsing해 web에 비주얼하게 나타내는데 목적이 있습니다.
+리눅스 툴을 이용한 Data 추출은 유대리님이
+raw data parsing은 이대리님이
+web에 나타내는 건 은사원이 주로 맡아서 진행하였습니다.
+
+현재는 CPU, Memory, I/O 탭 이외에 PageOwner라는 탭을 하나 생성해서
+Page Owner를 이용한 Memory 정보를 보여주고 있습니다. (작년 말 요청에 의해 새로 생성 후 계속 업데이트 중임)
+
+실제로는 CPU, Memory, I/O는 현재 거의 사용이 없고 
+최근에 들어온 데이터는 대부분 PageOwner쪽에만 정보가 나타날 것입니다.
+
+Profile Viewer에 하이차트가 많이 사용되었고 많은 Servlet, JSP, Iframe 등이 사용되었기에 참고가 많이 될 것 같습니다.
+(어떠한 웹 프레임웍도 사용하지 않았기 때문에 이해하기 쉬우리라 생각됩니다.)
+
+참고로.. 크롬에서는 정상동작 확인하였지만 일부 익스플로어에서 테스트는 하지 않았습니다.
+(Profile Viewer 배포시에도 크롬을 권장환경으로 명시)

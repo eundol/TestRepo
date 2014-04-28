@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/InternDev/!svn/ver/544/SystemProfiler/src/dao
+END
+BoardDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/InternDev/!svn/ver/493/SystemProfiler/src/dao/BoardDao.java
+END
+CpuDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/InternDev/!svn/ver/556/SystemProfiler/src/dao/CpuDao.java
+END
+CommonDao.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/InternDev/!svn/ver/556/SystemProfiler/src/dao/CommonDao.java
+END

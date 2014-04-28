@@ -1,0 +1,17 @@
+Profile Viewer 관련 Database 이름 : profiler_report
+
+=== Table ===
+common : profile 정보의 master 테이블 - 어떠한 정보건(cpu, memory, io, pageowner) master테이블에서 고유 id를 할당받음
+cpu : perf으로 추출한 CPU 정보 data
+free_board : 게시판 data
+iotop : iotop으로 추출한 입출련관련 data
+io_usage : io정보 추출..(정확한 툴이름은 기억안남;;;)
+mem_usage : free로 추출한 메모리 정보 data
+owner_memory : page owner로 추출한 메모리 정보 data
+owner_ps : page owner와 쌍을 이루는 프로세스 정보 data
+smem_usage : smem을 통해 얻은 메모리 데이터
+===========
+
+이해하셨겟지만 정보마다 고유의 id가 있고 각자 가지고 있는 정보를 해당테이블에 입력하는 형식입니다.
+그리고 그 테이블에 정보가 있으면 웹상에 나타나는 것입니다 ^^
+(없어도 오류는 안나게 exception 처리는 해두었지만.. 정보가 있고 없고를 표시하는건 못하고 가네여...)

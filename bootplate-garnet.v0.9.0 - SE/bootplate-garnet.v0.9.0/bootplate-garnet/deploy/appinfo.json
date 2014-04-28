@@ -1,0 +1,12 @@
+{
+	"id": "com.lge.app.appname",
+	"version": "1.0.0",
+	"vendor": "LGE",
+	"type": "web",
+	"main": "debug.html",
+	"title": "Garnet",
+	"icon": "icon.png",
+	"uiRevision": 1,
+	"uiScaling" : "%75",
+	"removable": true
+}

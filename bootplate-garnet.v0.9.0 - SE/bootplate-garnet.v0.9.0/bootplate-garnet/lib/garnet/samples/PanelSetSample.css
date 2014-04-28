@@ -1,0 +1,47 @@
+/* PanelSetSample.css */
+
+.g-sample .background-color-red .g-circle-layout-innerbox {
+	border-radius: 9999px;
+	background-color: #ff0000;
+}
+.g-sample .small-font {
+	font-size: 5px;
+	line-height: 10px;
+}
+.g-sample .font-color-red {
+	color: red;
+}
+.g-sample .sample-show-padding .g-panel-padding-left,
+.g-sample .sample-show-padding .g-panel-padding-right {
+	background: yellow;
+	opacity: 0.5;
+}
+button {
+	border-radius: 9999px;
+}
+button:active {
+	border-color: gray;
+}
+
+/* DataListSample.css */
+
+.g-sample-list-item {
+	height: 80px;
+	line-height: 80px;
+
+}
+.g-sample-list-item-title {
+	display: inline;
+	margin-left: 10px;
+}
+.g-sample-list-item-genre {
+	position: absolute;
+	display: inline;
+	padding-right: 10px;
+	right: 35px;
+	font-size: 12pt;
+	font-style: italic;
+}
+.g-sample-margin-right {
+	margin-right: 20px;
+}

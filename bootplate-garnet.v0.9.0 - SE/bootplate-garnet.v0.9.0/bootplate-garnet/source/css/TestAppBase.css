@@ -1,0 +1,236 @@
+/*
+#    @remark
+#        - 2014. 2. 13. Initial created
+#		 - 2014. 2. 28. Apply black theme
+#		 - 2014. 3.  7. Add display-none
+*/
+
+/* Please do not edit */
+/* Please do not edit */
+/* Please do not edit */
+/* basic */
+.test-app-base .display-none{
+	display: none;
+}
+.test-app-base .visibility-hidden{
+	visibility: hidden;
+}
+.test-app-base .g-common-width-height-fit{
+	background-color: #DDDDDD;
+}
+.test-app-base .watch-background{
+	border-radius: 50%; 
+	background-color: #000000;
+}
+.test-app-base .watch-background.white{
+	background-color: #FFFFFF;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #51ACFF;
+}
+.test-app-base .watch-background.black{
+	background-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+}
+.test-app-base .title{
+	position: absolute;
+	height: 24px;
+	width: 120px; 
+	padding-left:100px;
+	padding-right:100px;
+	padding-top: 8px;
+	padding-bottom: 5px;
+	font-size: 21px;
+	text-align: center;
+	color: #4B4B4B;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+	background-color: rgb(237, 237, 237);
+	font-family: Miso;
+	white-space: nowrap;
+	overflow: hidden;
+	opacity: 0.8;
+}
+.test-app-base .title .title-text{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-top: 0px;
+}
+/* list */
+.test-app-base .list-scroller{
+	position: absolute;
+	font-size: 33px;
+	text-align: center;
+	width: 100%; 
+	margin-top: 37px; 
+	height: 283px;
+}
+.test-app-base .list-scroller.white{
+	color: #FFFFFF;
+}
+.test-app-base .list-scroller.black{
+	color: #000000;
+}
+
+.test-app-base .item-component{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: white;
+	border-bottom-width: 1px;
+}
+.test-app-base .item-component:active{
+	color: black;
+	background-color: white;
+}
+.test-app-base .item-component.disabled{
+	color: gray;
+}
+.test-app-base .item-component.disabled:active{
+	color: black;
+	background-color: white;
+}
+/* Setting Properties */
+.test-app-base  .prop-field > *,
+.test-app-base  .target-field > *{
+	position: absolute;
+}
+.test-app-base .properties-scroller,
+.test-app-base .target-container-scroller{
+	position: absolute;
+	width: 100%; 
+	height: 180px;
+	margin-top: 37px; 
+}
+.test-app-base .properties{
+	margin-left: 10px;
+	color: white;
+	font-size: 20px;
+}
+.test-app-base .property > *{
+	float: left;
+}
+/* selected console */
+.test-app-base .prop-field .selected,
+.test-app-base .target-field .status {
+	width: 100%;
+	height: 40px;
+	margin-top: 217px;
+}
+.test-app-base .prop-field .selected .selected-title,
+.test-app-base .target-field .status .status-title{
+	margin-left: 45px;
+	color: black;
+	font-size: 15px;
+	font-style: italic;
+	color: silver;
+}
+.test-app-base .prop-field .selected .selected-bar,
+.test-app-base .target-field .status .status-bar{
+	margin: auto;
+	width: 242px;
+	height: 0px;
+	/* border-color: #51ACFF; */
+	border-color: silver;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+.test-app-base .prop-field .selected .selected-text,
+.test-app-base .target-field .status .status-text{
+	margin-top: 1px;
+	margin-left: 55px;
+	font-size: 15px;
+	color: #FF4289;
+}
+/* Button Group */
+.button-group{
+	margin-top: 264px;
+	font-size: 24px;
+}
+.button-group.rotate-90{
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=-1);
+	margin-left: 264px;
+	margin-top: 320px;
+}
+.button-group.rotate90{
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+	margin-left: 55px;
+	margin-top: 0px;
+}
+ 
+.button-group > * {
+	position: absolute;
+}
+.button-group .quarter-circle-bottom-left{
+	margin-left: 39px;
+    width: 118px; 
+    height: 53px; 
+    border: 2px solid #51ACFF;
+	/* color: black; */
+    background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 54%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(54%,#2989d8), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 54%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 54%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 54%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 54%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+    border-radius: 0 0 0 100%;
+    -moz-border-radius: 0 0 0 100%;
+    -webkit-border-radius: 0 0 0 100%;
+}
+.button-group .quarter-circle-bottom-left.quarter-circle-bottom-right {
+	margin-left: 159px;
+	border-radius: 0 0 100% 0;
+    -moz-border-radius: 0 0 100% 0;
+    -webkit-border-radius: 0 0 100% 0;
+}
+.button-group .quarter-circle-bottom-left:active{
+	background: #51ACFF;
+}
+.button-group .quarter-circle-bottom-left-text{
+	margin-top: 5px;
+	margin-left: 56px;
+}
+.button-group .quarter-circle-bottom-left-text.resetText{
+	margin-left: 48px;
+}
+.button-group .quarter-circle-bottom-right-text{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+/* will be removed */
+.test-app-base .list-sroller{
+	position: absolute;
+	font-size: 33px;
+	text-align: center;
+	width: 100%; 
+	margin-top: 37px; 
+	height: 283px;
+}
+.test-app-base .list-sroller.white{
+	color: #FFFFFF;
+}
+.test-app-base .list-sroller.black{
+	color: #000000;
+}
+.test-app-base .properties-sroller, 
+.test-app-base .target-container-sroller{
+	position: absolute;
+	width: 100%; 
+	height: 180px;
+	margin-top: 37px; 
+}
+
+/* Please do not edit */
+/* Please do not edit */
+/* Please do not edit */

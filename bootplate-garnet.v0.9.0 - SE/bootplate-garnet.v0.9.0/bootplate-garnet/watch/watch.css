@@ -1,0 +1,45 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.background {
+    position: absolute;
+    width: 493px;
+    height: 493px;
+    background: url('watch_320x320.png') no-repeat;
+    pointer-events:none;
+}
+iframe {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    margin-left: 86px;
+    margin-top: 88px;
+    border: 0px;
+}
+.btn-up {
+    position: absolute;
+    width: 58px;
+    height: 61px;
+    margin-left: 425px;
+    margin-top: 111px;
+}
+.btn-center {
+    position: absolute;
+    width: 44px;
+    height: 77px;
+    margin-left: 452px;
+    margin-top: 221px;
+}
+.btn-down {
+    position: absolute;
+    width: 62px;
+    height: 63px;
+    margin-left: 421px;
+    margin-top: 346px;
+}
+.simulator-button-layout {
+    position: absolute;
+    margin-left: 503px;
+    margin-top: 10px;
+}

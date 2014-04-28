@@ -1,0 +1,26 @@
+/* EnyoControlSample.css */
+
+body .g-sample {
+	height: auto;
+}
+.g-sample .data {
+	display: inline-block;
+	height: 16px;
+	min-width: 100px;
+	padding: 2px;
+	border: 1px dotted gray;
+	background-color: #aaaaaa;
+	color: gray;
+	vertical-align: middle;
+	font-size: 12px;
+	font-family: Monospace;
+}
+.g-sample label {
+	margin-right: 10px;
+}
+.g-sample label > * {
+	vertical-align: middle;
+}
+.g-sample button.active {
+	color: red;
+}

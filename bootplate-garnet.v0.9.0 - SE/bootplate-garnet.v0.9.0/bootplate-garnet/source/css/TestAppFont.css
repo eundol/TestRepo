@@ -1,0 +1,50 @@
+/*
+#    @remark
+#        - 2014. 3. 12. Initial created
+#
+*/
+
+/* ----- MISO ------ */
+@font-face {
+  font-family: "Miso";
+  src: local("LG Display-Light");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Miso";
+  src: local("Miso Medium"), url("./fonts/miso/miso-regular.ttf") format("truetype"), url("./fonts/miso/miso-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0D, U+20-7E, U+A1-FF, U+131, U+141-142, U+152-153, U+160-161, U+178, U+17D-17E, U+192, U+2C6, U+2DC, U+3C6, U+2013-2014, U+2018-201A, U+201C, U+201D, U+201E, U+2020-2022, U+2026, U+2030, U+2039, U+203A, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Miso Bold";
+  src: local("LG Display-Regular");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Miso Bold";
+  src: local("Miso Bold"), url("./fonts/miso/miso-bold.ttf") format("truetype"), url("./fonts/miso/miso-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0D, U+20-7E, U+A1-FF, U+131, U+141-142, U+152-153, U+160-161, U+178, U+17D-17E, U+192, U+2C6, U+2DC, U+3C6, U+2013-2014, U+2018-201A, U+201C, U+201D, U+201E, U+2020-2022, U+2026, U+2030, U+2039, U+203A, U+20AC, U+2122;
+}
+@font-face {
+  font-family: "Miso Light";
+  src: local("LG Display-Light");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Miso Light";
+  src: local("Miso Light"), url("./fonts/miso/miso-light.ttf") format("truetype"), url("./fonts/miso/miso-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  unicode-range: U+0D, U+20-7E, U+A1-FF, U+131, U+141-142, U+152-153, U+160-161, U+178, U+17D-17E, U+192, U+2C6, U+2DC, U+3C6, U+2013-2014, U+2018-201A, U+201C, U+201D, U+201E, U+2020-2022, U+2026, U+2030, U+2039, U+203A, U+20AC, U+2122;
+}
+
+/* Please do not edit */
+/* Please do not edit */
+/* Please do not edit */

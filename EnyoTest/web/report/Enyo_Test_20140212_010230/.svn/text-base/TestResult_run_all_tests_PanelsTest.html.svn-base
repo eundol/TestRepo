@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Enyo API Test Result</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+	font-size: 16pt;
+	color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 1px solid #777;
+    padding: 2px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; }
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body>
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Failed; 2:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'ft') {
+            if (level < 1) {
+                tr.className = 'hiddenRow';
+            }
+            else {
+                tr.className = '';
+            }
+        }
+        if (id.substr(0,2) == 'pt') {
+            if (level > 1) {
+                tr.className = '';
+            }
+            else {
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'f' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'p' + tid0;
+            tr = document.getElementById(tid);
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>Enyo API Test Result</h1>
+<p class='attribute'><strong>Version:</strong> EPK Rockhopper release 1.0~rc1-35, Enyo 2.3.0-rc.5</p>
+<p class='attribute'><strong>Test target:</strong> Total 44 APIs, 550 Test Cases</p>
+<p class='attribute'><strong>Result:</strong> <b><span style="color:#6c6;text-shadow:1px 1px gray">Pass 24</span></b> <b><span style="color:#c60;text-shadow:1px 1px gray">Fail 2</span></b></p>
+<p class='attribute'><strong>Start Time:</strong> 2014-02-12 03:41:56</p>
+<p class='attribute'><strong>Duration:</strong> 0:11:03.62</p>
+
+<p class='description'>Execute Enyo API Test with merged test app and test script automatically.</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Failed</a>
+<a href='javascript:showCase(2)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td align='center'>Count</td>
+    <td align='center'>Pass</td>
+    <td align='center'>Fail</td>
+    <td align='center'>Error</td>
+    <td align='center'>View</td>
+    <td align='center'>duration</td>
+</tr>
+
+<tr class='failClass'>
+    <td>EnyoTest.PanelsTest.PanelsTest</td>
+    <td align='right'>26</td>
+    <td align='right'>24</td>
+    <td align='right'>2</td>
+    <td align='right'>0</td>
+    <td align='center'><a href="javascript:showClassDetail('c1',26)">Detail</a></td>
+    <td align='right'>0:11:01.68<br>average : 0:00:25.44</td>
+</tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_invalid_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        pass</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.1: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_invalid_01
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:21.91
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_invalid_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        pass</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.2: Connecting to JIRA: http://jira2.lgsvl.com
+showHideHandle_string: moon-panels-handle stashed
+pattren_string: activity
+invalid_string: Test
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_invalid_02
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:40.88
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_invalid_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        pass</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.3: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_invalid_03
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.69
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_invalid_04</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        pass</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.4: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_invalid_04
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:29.29
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_invalid_05</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        pass</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.5: Connecting to JIRA: http://jira2.lgsvl.com
+replacePanel: Replace last panel only
+unsupported operand type(s) for &amp;: 'NoneType' and 'Issue'
+Error: unable to create issue : PanelsTest.test_Panels_invalid_05
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:20.46
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_01</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        pass</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.6: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: None
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_01
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.03
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_02</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        pass</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.7: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: None
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_02
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.21
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_03</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        pass</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.8: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: activity
+showHideHandle_hidden: hidden
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_03
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:24.86
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_04</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        pass</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.9: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: activity
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_04
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.20
+    </td>
+</tr>
+
+<tr id='pt1.10' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_05</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.10')" >
+        pass</a>
+
+    <div id='div_pt1.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.10: Connecting to JIRA: http://jira2.lgsvl.com
+always_viewing_string: None
+showHideHandle_string: moon-panels-handle right
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_05
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:24.86
+    </td>
+</tr>
+
+<tr id='pt1.11' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_06</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.11')" >
+        pass</a>
+
+    <div id='div_pt1.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.11: Connecting to JIRA: http://jira2.lgsvl.com
+always_viewing_string: always-viewing
+showHideHandle_hidden: hidden
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_06
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.27
+    </td>
+</tr>
+
+<tr id='pt1.12' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_07</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.12')" >
+        pass</a>
+
+    <div id='div_pt1.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.12: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: None
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_07
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:24.92
+    </td>
+</tr>
+
+<tr id='pt1.13' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_08</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.13')" >
+        pass</a>
+
+    <div id='div_pt1.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.13: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: activity
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_08
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:25.10
+    </td>
+</tr>
+
+<tr id='pt1.14' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_09</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.14')" >
+        pass</a>
+
+    <div id='div_pt1.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.14: Connecting to JIRA: http://jira2.lgsvl.com
+always_viewing_string: always-viewing
+showHideHandle_string: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_09
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:24.83
+    </td>
+</tr>
+
+<tr id='pt1.15' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_10</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.15')" >
+        pass</a>
+
+    <div id='div_pt1.15' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.15').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.15: Connecting to JIRA: http://jira2.lgsvl.com
+pattren_string: activity
+showHideHandle: &lt;div class="moon-panels-handle right" id="app_main_panelsTest_targetPanels_showHideHandle"&gt;&lt;/div&gt;
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_10
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:29.29
+    </td>
+</tr>
+
+<tr id='pt1.16' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_11</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.16')" >
+        pass</a>
+
+    <div id='div_pt1.16' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.16').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.16: Connecting to JIRA: http://jira2.lgsvl.com
+showHideHandle_string: moon-panels-handle stashed
+pattren_string: activity
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_11
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:33.66
+    </td>
+</tr>
+
+<tr id='pt1.17' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_12</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.17')" >
+        pass</a>
+
+    <div id='div_pt1.17' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.17').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.17: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+pushpannel_three: 03
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_12
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:20.29
+    </td>
+</tr>
+
+<tr id='pt1.18' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_13</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.18')" >
+        pass</a>
+
+    <div id='div_pt1.18' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.18').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.18: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+pushpannel_one: 03
+pushpannel_two: 04
+pushpannel_three: 05
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_13
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:26.07
+    </td>
+</tr>
+
+<tr id='pt1.19' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_14</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.19')" >
+        pass</a>
+
+    <div id='div_pt1.19' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.19').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.19: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+pushpannels_one: 03
+pushpannels_two: 04
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_14
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:21.22
+    </td>
+</tr>
+
+<tr id='pt1.20' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_15</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.20')" >
+        pass</a>
+
+    <div id='div_pt1.20' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.20').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.20: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: 01
+isPanel_two: 02
+status_string: isPanel:true
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_15
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:21.17
+    </td>
+</tr>
+
+<tr id='pt1.21' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_16</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.21')" >
+        pass</a>
+
+    <div id='div_pt1.21' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.21').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.21: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: None
+isPanel_two: None
+status_string_undefined: isPanel:undefined
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_16
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:23.73
+    </td>
+</tr>
+
+<tr id='pt1.22' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_17</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.22')" >
+        pass</a>
+
+    <div id='div_pt1.22' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.22').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.22: Connecting to JIRA: http://jira2.lgsvl.com
+isPanel_one: None
+isPanel_two: None
+status_string_popup: Panel popped
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_17
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:23.90
+    </td>
+</tr>
+
+<tr id='pt1.23' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_18</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.23')" >
+        pass</a>
+
+    <div id='div_pt1.23' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.23').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.23: Connecting to JIRA: http://jira2.lgsvl.com
+getpannel_index: getPanelIndex:0
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_18
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:16.57
+    </td>
+</tr>
+
+<tr id='ft1.24' class='none'>
+    <td class='failCase'><div class='testcase'>test_Panels_valid_19</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.24')" >
+        fail</a>
+
+    <div id='div_ft1.24' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.24').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+ft1.24: Connecting to JIRA: http://jira2.lgsvl.com
+getpannel_index: Panel popped
+unsupported operand type(s) for &amp;: 'NoneType' and 'Issue'
+Error: unable to create issue : PanelsTest.test_Panels_valid_19
+Traceback (most recent call last):
+  File "/home/khyoo/EnyoTest/pytell/EnyoTest/PanelsTest.py", line 606, in test_Panels_valid_19
+    self.assertTrue(self.flag_result)
+AssertionError: False is not true
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:20.38
+    </td>
+</tr>
+
+<tr id='pt1.25' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_Panels_valid_20</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.25')" >
+        pass</a>
+
+    <div id='div_pt1.25' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.25').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+pt1.25: Connecting to JIRA: http://jira2.lgsvl.com
+replacePanel: Panel Replaced
+unsupported operand type(s) for &amp;: 'NoneType' and 'NoneType'
+Error: unable to create issue : PanelsTest.test_Panels_valid_20
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:20.55
+    </td>
+</tr>
+
+<tr id='ft1.26' class='none'>
+    <td class='failCase'><div class='testcase'>test_Panels_valid_21</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.26')" >
+        fail</a>
+
+    <div id='div_ft1.26' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.26').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <div>
+            <pre>
+            
+ft1.26: Connecting to JIRA: http://jira2.lgsvl.com
+Panel_one: None
+unsupported operand type(s) for &amp;: 'NoneType' and 'Issue'
+Error: unable to create issue : PanelsTest.test_Panels_valid_21
+Traceback (most recent call last):
+  File "/home/khyoo/EnyoTest/pytell/EnyoTest/PanelsTest.py", line 667, in test_Panels_valid_21
+    self.assertTrue(self.flag_result)
+AssertionError: False is not true
+
+
+            </pre>
+        </div>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td align='right'>
+    0:00:41.34
+    </td>
+</tr>
+
+<tr id='total_row'>
+    <td align='center'>Total</td>
+    <td align='right'>26</td>
+    <td align='right'>24</td>
+    <td align='right'>2</td>
+    <td align='right'>0</td>
+    <td>&nbsp;</td>
+    <td align='right'>0:11:03.62</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+서버에 설치된 MySQL은 웹서비스들과 테스트 Gerrit에서 사용되고 있습니다.
+port: 3306 , id : heesung , pw : multisqe 
+저는 툴로 HeidiSQL 사용했습니다.

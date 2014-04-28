@@ -1,0 +1,3 @@
+id : seadmin
+pw : multisqe
+sudo pw : multisqe

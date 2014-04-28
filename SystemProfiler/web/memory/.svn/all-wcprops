@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory
+END
+memtimecharts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/memtimecharts.jsp
+END
+memtable.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/memtable.jsp
+END
+smeminfotabletitle.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/smeminfotabletitle.jsp
+END
+smemhighusage.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/smemhighusage.jsp
+END
+smeminfotable.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/smeminfotable.jsp
+END
+smemhighgap.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/smemhighgap.jsp
+END
+membarcharts.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/membarcharts.jsp
+END
+summary.jsp
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/web/memory/summary.jsp
+END

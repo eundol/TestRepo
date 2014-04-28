@@ -1,0 +1,21 @@
+/* DataListSample.css */
+
+.g-sample-list-item {
+	height: 80px;
+	line-height: 80px;
+}
+.g-sample-list-item-title {
+	display: inline;
+	margin-left: 10px;
+}
+.g-sample-list-item-genre {
+	position: absolute;
+	display: inline;
+	padding-right: 10px;
+	right: 35px;
+	font-size: 12pt;
+	font-style: italic;
+}
+.g-sample-margin-right {
+	margin-right: 20px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Profile Viewer</title>
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+	font: bold 12px/1.5em Verdana;
+	height: 100%;
+}
+h2 {
+	font: bold 14px Verdana, Arial, Helvetica, sans-serif;
+	color: #000;
+	margin: 0px;
+	padding: 0px 0px 0px 15px;
+}
+</style>
+</head>
+<body>
+<center><br>
+<font color="black">Delete Success! :)</font>
+<br><br>
+<script type="text/javascript">
+	function refresh(){
+		window.close();
+	}
+</script>
+	<div style="margin-top : 25px; text-align: center;">
+		<a href="javascript:window.close()">Close</a>
+	</div>
+</center>
+</body>
+</html>

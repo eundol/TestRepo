@@ -1,0 +1,43 @@
+10
+
+dir
+14
+http://dfkcpc2345.lge.net/svn/ProfileVu/SystemProfiler/src
+http://dfkcpc2345.lge.net/svn/ProfileVu
+
+
+
+2013-11-12T11:42:04.910532Z
+14
+heesung.eun
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+061feaf7-0125-4242-a526-5c932d6d4475
+
+biz
+dir
+
+common
+dir
+
+controller
+dir
+
+dao
+dir
+
+entity
+dir
+

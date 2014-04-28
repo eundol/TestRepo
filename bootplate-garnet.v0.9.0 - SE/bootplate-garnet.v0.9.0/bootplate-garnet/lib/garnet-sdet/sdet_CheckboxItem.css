@@ -1,0 +1,78 @@
+/*
+#    @remark
+#        - 2014. 3. 12. Initial created
+#
+*/
+/* Checkbox.css */
+.sdet.g-checkbox {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+  background: url(./images/checkboxitem.png) no-repeat;
+  /* reset for ? */
+
+  margin: 0px;
+  /* these entries cause toggle-button and checkbox to line up properly*/
+
+  display: inline-block;
+  vertical-align: middle;
+}
+.sdet.g-checkbox[checked] {
+  background-position: 0px -36px;
+}
+.sdet.g-checkbox[disabled] {
+  opacity: 0.4;
+}
+/* CheckboxItem.css */
+.sdet.g-checkbox-item {
+  display: block;
+  position: relative;
+  height: 36px;
+}
+/* Label */
+.sdet.g-checkbox-item .g-checkbox-item-label-wrapper {
+  height: 36px;
+  margin-right: 40px;
+  position: absolute;
+}
+.sdet.g-checkbox-item .g-checkbox-item-label {
+  float: left;
+  white-space: nowrap;
+  height: 36px;
+}
+/* Checkbox */
+.sdet.g-checkbox-item .g-checkbox {
+  position: absolute;
+  right: 0;
+  background-image: none;
+}
+.sdet.g-checkbox-item .g-checkbox[checked] {
+  background-image: url(./images/checkboxitem.png);
+}
+.sdet.g-checkbox-item.disabled {
+  cursor: default;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+.sdet.g-checkbox-item .g-checkbox[disabled] {
+  cursor: default;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+/* Left-handed checkbox */
+/* Label */
+.sdet.g-checkbox-item.left-handed .g-checkbox-item-label-wrapper {
+  margin-right: 0px;
+  margin-left: 40px;
+}
+.sdet.g-checkbox-item.left-handed .g-checkbox-item-label {
+  float: right;
+}
+/* Checkbox */
+.sdet.g-checkbox-item.left-handed .g-checkbox {
+  right: auto;
+}
+
+/* Please do not edit */
+/* Please do not edit */
+/* Please do not edit */

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/InternDev/!svn/ver/495/SystemProfiler/src/entity
+END
+CpuEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/InternDev/!svn/ver/546/SystemProfiler/src/entity/CpuEntity.java
+END
+BoardEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/InternDev/!svn/ver/493/SystemProfiler/src/entity/BoardEntity.java
+END
+CpuSearchEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/InternDev/!svn/ver/556/SystemProfiler/src/entity/CpuSearchEntity.java
+END
+CpuSummaryEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/InternDev/!svn/ver/547/SystemProfiler/src/entity/CpuSummaryEntity.java
+END

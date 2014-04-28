@@ -1,0 +1,49 @@
+/* Button.css */
+
+.g-button {
+	box-sizing: border-box;
+	height: @g-button-height;
+	border: @g-button-border-width solid @g-button-border-color;
+	margin: 0 2px;
+	padding: 0 9px 4px 9px;
+	border-radius: @g-button-border-radius;
+	background-color: @g-button-background-color;
+	color: @g-default-font-color;
+	text-align: center;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	display: inline-block;
+}
+.g-button > .g-button-client {
+}
+
+/*
+	IE8 can't handle these selectors in tandem:
+	.g-button.active, .g-button:active:not([disabled]) {
+
+	the effect is as if .g-button.active doesn't exist
+*/
+.g-button.pressed,
+.g-button:active:hover:not([disabled]) {
+	border-color: @g-button-border-color-pressed;
+	background-color: @g-button-background-color-pressed;
+	color: @g-button-text-color-pressed;
+}
+
+.g-button.active {
+	border-color: @g-button-border-color-active;
+	background-color: @g-button-background-color-active;
+	color: @g-button-text-color-active;
+}
+
+.g-button[disabled] {
+	border-color: @g-button-border-color-disabled;
+	background-color: @g-button-background-color-disabled;
+	color: @g-button-text-color-disabled;
+	cursor: default;
+}
+
+.g-button:focus {
+	outline: none;
+}

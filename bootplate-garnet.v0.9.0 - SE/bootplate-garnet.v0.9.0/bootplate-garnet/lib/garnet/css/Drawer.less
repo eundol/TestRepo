@@ -1,0 +1,32 @@
+/* Drawer.css */
+
+.g-drawer {
+	position: absolute;
+	top: 0px;
+	width: 320px;
+	overflow: hidden;
+	pointer-events: none;
+}
+.g-drawer .g-drawer-container {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+
+	background-color: #000000;
+	pointer-events: auto;
+
+	-webkit-transition: -webkit-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	-ms-transition: -ms-transform 0.5s;
+	-o-transition: -o-transform 0.5s;
+	transition: transform 0.5s;
+	.g-common-hw-accelerated;
+}
+.g-drawer .g-drawer-content {
+	width: 320px;
+
+	color: @g-default-font-color;
+	font-size: @g-drawer-content-font-size;
+	text-align: center;
+	white-space: nowrap;
+}

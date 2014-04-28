@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/InternDev/!svn/ver/595/SystemProfiler/src/biz
+END
+MemBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/InternDev/!svn/ver/595/SystemProfiler/src/biz/MemBiz.java
+END
+BoardBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/InternDev/!svn/ver/493/SystemProfiler/src/biz/BoardBiz.java
+END
+IoBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/InternDev/!svn/ver/607/SystemProfiler/src/biz/IoBiz.java
+END
+CpuBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/InternDev/!svn/ver/604/SystemProfiler/src/biz/CpuBiz.java
+END
+CommonBiz.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/InternDev/!svn/ver/493/SystemProfiler/src/biz/CommonBiz.java
+END

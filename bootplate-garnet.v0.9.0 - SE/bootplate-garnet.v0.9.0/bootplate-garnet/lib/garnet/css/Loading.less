@@ -1,0 +1,34 @@
+/* Loading.css */
+
+.g-loading {
+   content: "";
+   box-sizing: border-box;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   border-top: @g-loading-border-width solid @g-loading-bar-border-color;
+   border-left: @g-loading-border-width solid @g-loading-border-color;
+   border-bottom: @g-loading-border-width solid @g-loading-border-color;
+   border-right: @g-loading-border-width solid @g-loading-border-color;
+   -webkit-animation: rotation @g-loading-speed infinite linear;
+   -moz-animation: rotation @g-loading-speed infinite linear;
+   -o-animation: rotation @g-loading-speed infinite linear;
+   animation: rotation @g-loading-speed infinite linear;
+   border-radius: 100%;
+}
+@-webkit-keyframes rotation {
+   from {-webkit-transform: rotateZ(0deg);}
+   to {-webkit-transform: rotateZ(359deg);}
+}
+@-moz-keyframes rotation {
+   from {-moz-transform: rotateZ(0deg);}
+   to {-moz-transform: rotateZ(359deg);}
+}
+@-o-keyframes rotation {
+   from {-o-transform: rotateZ(0deg);}
+   to {-o-transform: rotateZ(359deg);}
+}
+@keyframes rotation {
+   from {transform: rotateZ(0deg);}
+   to {transform: rotateZ(359deg);}
+}

@@ -1,0 +1,14 @@
+/* WheelSliderPanelSample.css */
+
+
+.g-sample .g-ok-image {
+	width: 72px;
+	height: 72px;
+	background: url(../images/ic_done.svg) no-repeat;
+}
+.g-sample .g-cancel-image {
+	width: 72px;
+	height: 72px;
+	margin-right: 28px;
+	background: url(../images/ic_close.svg) no-repeat;
+}

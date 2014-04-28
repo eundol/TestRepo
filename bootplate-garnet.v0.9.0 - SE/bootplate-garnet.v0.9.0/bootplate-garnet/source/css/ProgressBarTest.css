@@ -1,0 +1,55 @@
+/* ProgressBarTest.css
+#    @remark
+#		 - 2014. 2. 28. Initial created
+*/
+
+/* barClasses */
+.progressbar-test .progress-bar-bar-red{
+	height: 100%;
+	background-color: red;
+	position: absolute;
+	top: 0;
+}
+
+.progressbar-test .progress-bar-bar-green{
+	height: 100%;
+	background-color: green;
+	position: absolute;
+	top: 0;
+}
+
+.progressbar-test .progress-bar-bar-blue{
+	height: 100%;
+	background-color: blue;
+	position: absolute;
+	top: 0;
+}
+
+/* bgBarClasses */
+.progressbar-test .progress-bg-bar-orange {
+	height: 100%;
+	background-color: orange;
+	position: absolute;
+	top: 0;
+}
+
+.progressbar-test .progress-bg-bar-olive {
+	height: 100%;
+	background-color: olive;
+	position: absolute;
+	top: 0;
+}
+
+.progressbar-test .progress-bg-bar-cyan{
+	height: 100%;
+	background-color: cyan;
+	position: absolute;
+	top: 0;
+}
+
+.progressbar-test .progress-bg-bar-grey{
+	height: 100%;
+	background-color: grey;
+	position: absolute;
+	top: 0;
+}

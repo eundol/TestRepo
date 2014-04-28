@@ -1,0 +1,239 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import common.JdbcTemplate;
+
+import entity.IoEntity;
+
+/*
+ * class name: IoDao
+ * description: I/O 관련 Data를 DB로 부터 가져오는 작업을 처리하는 부분(dao)
+ */
+public class IoDao {
+	private Connection conn;
+
+	/*
+	 * constructor name: IoDao
+	 * description: IoDato 생성과 동시에 DB Connector 생성
+	 */
+	public IoDao(Connection conn) {
+		this.conn = conn;
+	}
+
+	/*
+	 * method name: getIoTable
+	 * params:  ioTable, id, sequence
+	 * description: iostat 결과 테이블을 DB로 부터 가져오는 작업
+	 * query: 
+	 * => select * from io_usage where profile_id = ?
+	 * => select * from io_usage where profile_id = ? and sequence = ?
+	 */
+	public ArrayList<IoEntity> getIoTable(ArrayList<IoEntity> ioTable,
+			String id, String sequence) {
+		System.out.println("getIoTable-dao getIoTable start**");
+
+		//필요한 변수 선언 및 초기화
+		IoEntity entity = null;
+		PreparedStatement psmt = null;
+		ResultSet rset = null;
+
+		String device = null;
+		String tps = null;
+		String read_s = null;
+		String wrtn_s = null;
+		String read = null;
+		String wrtn = null;
+		String query = null;
+
+		//I/O정보 페이지에 처음 진입인지(sequence==0) 그래프에서 이벤트(sequence)를 가지고 온건지 확인하여 query 선정
+		if (sequence.equals("0")) {
+			query = "select * from io_usage where profile_id = ?";
+		} else {
+			query = "select * from io_usage where profile_id = ? and sequence = ?";
+		}
+
+		try {
+
+			//sequence가 0인지 아닌지에 따라 query에 data 세팅
+			psmt = conn.prepareStatement(query);
+
+			if (sequence.equals("0")) {
+				psmt.setString(1, id);
+			} else {
+				psmt.setString(1, id);
+				psmt.setString(2, sequence);
+			}
+
+			//query 실행
+			rset = psmt.executeQuery();
+
+			//result set에 담긴 결과 data를 ioTable list에 저장
+			while (rset.next()) {
+
+				entity = new IoEntity(id, sequence, device, tps, read_s,
+						wrtn_s, read, wrtn);
+
+				if (sequence.equals("0")) {
+					entity.setSequence(rset.getString(2));
+				}
+
+				device = rset.getString(3);
+				if (device != null) {
+					entity.setDevice(device);
+				}
+
+				tps = rset.getString(4);
+				if (tps != null) {
+					entity.setTps(tps);
+				}
+
+				read_s = rset.getString(5);
+				if (read_s != null) {
+					entity.setRead_s(read_s);
+				}
+
+				wrtn_s = rset.getString(6);
+				if (wrtn_s != null) {
+					entity.setWrtn_s(wrtn_s);
+				}
+
+				read = rset.getString(7);
+				if (read != null) {
+					entity.setRead(read);
+				}
+
+				wrtn = rset.getString(8);
+				if (wrtn != null) {
+					entity.setWrtn(wrtn);
+				}
+
+				ioTable.add(entity);
+			}
+
+		} catch (Exception e) {
+			System.out.println("## getIoTable-dao Error getIoTable##");
+		} finally {
+			JdbcTemplate.close(rset);
+			JdbcTemplate.close(psmt);
+		}
+
+		return ioTable;
+	}
+
+	/*
+	 * method name: getIoTableSequenceCnt
+	 * params: none
+	 * description: iostat 결과 테이블 중 sequence 종류 개수를 DB로 부터 가져오는 작업
+	 * query: 
+	 * => SELECT COUNT(DISTINCT sequence) FROM io_usage
+	 */
+	public int getIoTableSequenceCnt(String id) {
+		System.out.println("getIoTable-dao getIoTableSequenceCnt start**");
+		
+		//필요한 변수 선언 및 초기화
+		PreparedStatement psmt = null;
+		ResultSet rset = null;
+		int sequenceCnt = 0;
+
+		//query 세팅
+		String query = "SELECT COUNT(DISTINCT sequence) from io_usage where profile_id = ?";
+
+		try {
+			//쿼리 실행
+			
+			//sequence가 0인지 아닌지에 따라 query에 data 세팅
+			psmt = conn.prepareStatement(query);
+			psmt.setString(1, id);
+			rset = psmt.executeQuery();
+
+			//result set에 담겨진 결과를 sequenceCnt에 저장
+			while (rset.next()) {
+				sequenceCnt = Integer.parseInt(rset.getString(1));
+			}
+
+		} catch (Exception e) {
+			System.out
+					.println("## getIoTable-dao Error getIoTableSequenceCnt##");
+		} finally {
+			JdbcTemplate.close(rset);
+			JdbcTemplate.close(psmt);
+		}
+
+		return sequenceCnt;
+	}
+
+	/*
+	 * method name: getIoTableDeviceCnt
+	 * params: none
+	 * description: iostat 결과 테이블 중 device 종류 개수를 DB로 부터 가져오는 작업
+	 * query: 
+	 * => SELECT COUNT(DISTINCT device) FROM io_usage
+	 */
+	public int getIoTableDeviceCnt(String id) {
+		System.out.println("getIoTable-dao getIoTableDeviceCnt start**");
+
+		//필요한 변수 선언 및 초기화
+		PreparedStatement psmt = null;
+		ResultSet rset = null;
+		int deviceCnt = 0;
+
+		//query 세팅
+		String query = "SELECT COUNT(DISTINCT device) from io_usage where profile_id = ?";
+
+		try {
+			//쿼리 실행
+			psmt = conn.prepareStatement(query);
+			psmt.setString(1, id);
+			rset = psmt.executeQuery();
+
+			//result set에 담겨진 결과를 deviceCnt 저장
+			while (rset.next()) {
+				deviceCnt = Integer.parseInt(rset.getString(1));
+			}
+
+		} catch (Exception e) {
+			System.out.println("## getIoTable-dao Error getIoTableDeviceCnt##");
+		} finally {
+			JdbcTemplate.close(rset);
+			JdbcTemplate.close(psmt);
+		}
+
+		return deviceCnt;
+	}
+
+	public void getCpuUsedFromIoStat(String id, IoEntity avgEntity) {
+		System.out.println("getCpuUsedFromIoStat-dao**");
+		
+		PreparedStatement psmt = null;
+		ResultSet rset = null;
+		String query = "select round(AVG(i.user),2), round(AVG(i.nice),2), round(AVG(i.system),2), round(AVG(i.iowait),2), round(AVG(i.steal),2), round(AVG(i.idle),2) from io_usage i where profile_id = ? group by i.sequence and i.profile_id";
+		
+		try {
+			psmt = conn.prepareStatement(query);
+			psmt.setString(1, id);
+			rset = psmt.executeQuery();
+
+			while (rset.next()) {
+				avgEntity.setUser(rset.getString(1));
+				avgEntity.setNice(rset.getString(2));
+				avgEntity.setSystem(rset.getString(3));
+				avgEntity.setIowait(rset.getString(4));
+				avgEntity.setSteal(rset.getString(5));
+				avgEntity.setIdle(rset.getString(6));
+			}
+
+		} catch (Exception e) {
+			System.out.println("## getCpuUsedFromIoStat-dao Error ##");
+		} finally {
+			JdbcTemplate.close(rset);
+			JdbcTemplate.close(psmt);
+		}
+		
+		return;
+	}
+
+}

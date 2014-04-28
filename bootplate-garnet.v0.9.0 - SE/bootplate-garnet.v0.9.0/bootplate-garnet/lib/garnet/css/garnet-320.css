@@ -1,0 +1,1671 @@
+/* WARNING: This is a generated file for backward-compatibility.  Most      */
+/* users should instead modify LESS files.  If you choose to edit this CSS  */
+/* directly rather than LESS files, you should make sure less.xx.yy.min.js  */
+/* is commented out in your debug.html, and run deploy.sh/bat using the     */
+/* '-c' flag to disable LESS compilation.  This will force the loader and   */
+/* minifier to fall back to using CSS files in place of the same-name       */
+/* LESS file.                                                               */
+
+/* g default parameters defined here */
+/* App */
+/* ---------------------------------------*/
+/* Wheel */
+/* ---------------------------------------*/
+/* Font */
+/* ---------------------------------------*/
+/* Font Sizes */
+/* Images */
+/* ---------------------------------------*/
+/* Icon */
+/* ---------------------------------------*/
+/* Icon Sizes */
+/* Icon URLs */
+/* App */
+/* ---------------------------------------*/
+/* Colors */
+/* ---------------------------------------*/
+/* Font */
+/* ---------------------------------------*/
+/* Loading */
+/* ---------------------------------------*/
+/* Scrim */
+/* ---------------------------------------*/
+/* Popup */
+/* ---------------------------------------*/
+/* Disabled Opacity */
+/* ---------------------------------------*/
+/* Button */
+/* ---------------------------------------*/
+/* Icon */
+/* ---------------------------------------*/
+/* Tooltip */
+/* ---------------------------------------*/
+/* ProgressBar */
+/* ---------------------------------------*/
+/* Checkbox */
+/* ---------------------------------------*/
+/* Spinner */
+/* ---------------------------------------*/
+/* g font styles defined here */
+/* ----- SYSTEM FONT NAMES ------ */
+/* ----- NewSmartGothic------ */
+@font-face {
+  font-family: "NewSmartGothic";
+  src: local("NewSmartGothic-Regular"), url("../fonts/NewSmartGothic-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NewSmartGothic Bold";
+  src: local("NewSmartGothic-Bold"), url("../fonts/NewSmartGothic-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NewSmartGothic Light";
+  src: local("NewSmartGothic-Light"), url("../fonts/NewSmartGothic-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* g text CSS */
+/* g common classes defined here */
+/* Common classes applicable to multiple controls */
+.garnet {
+  z-index: 0;
+  font-family: "NewSmartGothic";
+  font-size: 28px;
+  color: #ffffff;
+}
+.g-button-text {
+  font-weight: normal;
+  font-size: 24px;
+  font-style: normal;
+}
+.g-common-body-font {
+  font-family: "NewSmartGothic";
+  font-size: 28px;
+  color: #ffffff;
+}
+.g-common-width-height-fit {
+  width: 320px;
+  height: 320px;
+}
+.g-common-hw-accelerated {
+  -webkit-transform: scale3d(1, 1, 1);
+}
+.g-common-user-select-none {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+
+  -moz-user-select: none;
+  /* Firefox all */
+
+  -ms-user-select: none;
+  /* IE 10+ */
+
+  /* No support for these yet, use at own risk */
+
+  -o-user-select: none;
+  user-select: none;
+}
+.g-common-point-events-none {
+  pointer-events: none;
+}
+.g-common-circle-clip {
+  -webkit-clip-path: circle(160px, 160px, 160px);
+}
+/* g individual widget CSS defined here */
+/* Button.css */
+.g-button {
+  box-sizing: border-box;
+  height: 52px;
+  border: 3px solid #828282;
+  margin: 0 2px;
+  padding: 0 9px 4px 9px;
+  border-radius: 10px;
+  background-color: #7a7a7a;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+}
+/*
+	IE8 can't handle these selectors in tandem:
+	.g-button.active, .g-button:active:not([disabled]) {
+
+	the effect is as if .g-button.active doesn't exist
+*/
+.g-button.pressed,
+.g-button:active:hover:not([disabled]) {
+  border-color: #828282;
+  background-color: #565555;
+  color: #272727;
+}
+.g-button.active {
+  border-color: #828282;
+  background-color: #565555;
+  color: #ffffff;
+}
+.g-button[disabled] {
+  border-color: #c7c7c7;
+  background-color: #c7c7c7;
+  color: #272727;
+  cursor: default;
+}
+.g-button:focus {
+  outline: none;
+}
+/* Checkbox.css */
+.g-checkbox {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  background: url(../images/checkboxitem.png) no-repeat;
+  /* reset for ? */
+
+  margin: 0px;
+  /* these entries cause toggle-button and checkbox to line up properly*/
+
+  display: inline-block;
+  vertical-align: middle;
+}
+.g-checkbox[checked] {
+  background-position: 0px -48px;
+}
+.g-checkbox[disabled] {
+  opacity: 0.4;
+}
+/* CommandBar.css */
+.g-command-bar {
+  margin-top: 248px;
+  bottom: 0;
+  background-color: #101015;
+}
+.g-command-bar .g-drawer-content {
+  width: 32px;
+  padding: 20px 0 0;
+  margin: 0;
+}
+.g-command-bar .g-cancel-image {
+  display: inline-block;
+  width: 159px;
+  height: 72px;
+  background: url(../images/ic_command_close.svg) no-repeat 81px 2px;
+  pointer-events: auto;
+}
+.g-command-bar .g-cancel-image:active {
+  background-color: #282828;
+}
+.g-command-bar .g-ok-image {
+  display: inline-block;
+  width: 159px;
+  height: 72px;
+  background: url(../images/ic_command_done.svg) no-repeat 17px 2px;
+  pointer-events: auto;
+}
+.g-command-bar .g-ok-image:active {
+  background-color: #282828;
+}
+.g-command-bar .g-divider-image {
+  display: inline-block;
+  width: 2px;
+  height: 72px;
+  margin: 0;
+  background-color: #222226;
+  pointer-events: auto;
+}
+/* ConfirmPopup.css */
+.g-confirm-popup > * {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.g-confirm-popup .g-confirm-popup-icon {
+  width: 48px;
+  height: 48px;
+  margin: 8px 0 10px;
+}
+.g-confirm-popup-client {
+  width: 320px;
+  height: 142px;
+  overflow: hidden;
+}
+.g-confirm-popup .g-confirm-popup-button-container {
+  width: 200px;
+  height: 72px;
+  margin-top: 14px;
+  pointer-events: none;
+}
+.g-confirm-popup .g-icon-button {
+  width: 72px;
+  height: 72px;
+  margin: 0 14px;
+  pointer-events: auto;
+}
+.g-confirm-popup .g-ok-image {
+  background: url(../images/ic_done.svg) no-repeat;
+}
+.g-confirm-popup .g-cancel-image {
+  background: url(../images/ic_close.svg) no-repeat;
+}
+/* ContextualPopup.css */
+.g-popup-contextual .g-icon-button {
+  pointer-events: auto;
+  margin: 5px;
+}
+.g-popup-contextual .g-popup-contextual-button {
+  width: 84px;
+  height: 84px;
+}
+.g-popup-contextual.two-buttons .g-popup-contextual-button {
+  margin: 5px 13px;
+}
+.g-popup-contextual .g-popup-close {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  top: auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 26px 124px;
+}
+/* DataList.css */
+.g-data-list {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.g-data-list-header-comp {
+  width: 100%;
+  height: 56px;
+}
+.g-data-list-footer-comp {
+  width: 100%;
+  height: 27px;
+}
+/* DataGridList.css */
+.enyo-data-grid-list.g-data-grid-list {
+  background-color: #ffffff;
+  position: absolute;
+}
+.g-data-grid-list .g-scroller-v-column {
+  right: -10px;
+  width: 10px;
+}
+.g-data-grid-list .g-scroller-v-column .g-scroller-vthumb-container {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+}
+/* DatePickerPanel.css */
+.g-date-picker {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  text-align: center;
+}
+.g-date-picker .g-date-picker-wrap {
+  position: absolute;
+  height: 78px;
+}
+.g-date-picker .g-date-picker-wrap.year {
+  width: 100%;
+  top: 0px;
+  left: 0;
+  right: 0;
+}
+.g-date-picker .g-date-picker-wrap.month {
+  width: 50%;
+  top: 60px;
+  left: 0;
+  right: 50%;
+  text-align: right;
+}
+.g-date-picker .g-date-picker-wrap.day {
+  width: 50%;
+  top: 60px;
+  left: 50%;
+  right: 0;
+  text-align: left;
+}
+.g-date-picker .g-date-picker-field {
+  height: 78px;
+  margin: 12px;
+  line-height: 78px;
+  font-size: 65px;
+  color: #ffffff;
+}
+.g-date-picker .g-date-picker-field.selected {
+  color: #1ddbd9;
+}
+.g-date-picker .g-ok-image {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  background: url(../images/ic_done.svg) no-repeat;
+}
+.g-date-picker .g-cancel-image {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  left: 30px;
+  bottom: 0;
+  background: url(../images/ic_close.svg) no-repeat;
+}
+/* Drawer.css */
+.g-drawer {
+  position: absolute;
+  top: 0px;
+  width: 320px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.g-drawer .g-drawer-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000000;
+  pointer-events: auto;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  -ms-transition: -ms-transform 0.5s;
+  -o-transition: -o-transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: scale3d(1, 1, 1);
+}
+.g-drawer .g-drawer-content {
+  width: 320px;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: center;
+  white-space: nowrap;
+}
+/* Icon.css */
+.g-icon {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+.g-icon.disabled {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+/* IconButton.css */
+.g-icon-button {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Layout.css */
+/* Flex */
+.g-layout.fixed {
+  table-layout: fixed;
+}
+.g-layout.auto {
+  table-layout: auto;
+}
+.flex {
+  width: auto;
+}
+table.g-layout {
+  border-collapse: collapse;
+}
+.g-layout > * > * > td {
+  overflow: hidden;
+}
+.g-layout > * > * > td {
+  border: 0;
+}
+/* Absolute */
+.g-layout-absolute-wrapper {
+  position: relative;
+}
+.g-layout-absolute-wrapper > * {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.g-layout-absolute-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.g-layout-absolute-fit {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* Text */
+.g-layout-text-wrapper > .center,
+.g-layout-text-center {
+  text-align: center;
+}
+.g-layout-text-wrapper > .left,
+.g-layout-text-left {
+  text-align: left;
+}
+.g-layout-text-wrapper > .right,
+.g-layout-text-right {
+  text-align: right;
+}
+/* Block */
+.g-layout-block-center {
+  display: block;
+  margin: auto;
+}
+/* Box */
+.g-layout-box-wrapper > .outside-circle,
+.g-layout-box-outside-circle {
+  width: 320px;
+  height: 320px;
+  margin: auto;
+}
+.g-layout-box-wrapper > .outside-circle-no-wheel,
+.g-layout-box-outside-circle-no-wheel {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+}
+.g-layout-box-wrapper > .inside-circle-no-wheel,
+.g-layout-box-inside-circle-no-wheel {
+  width: 226px;
+  height: 226px;
+  margin: auto;
+}
+.g-layout-box-wrapper > .inside-circle,
+.g-layout-box-inside-circle {
+  width: 198px;
+  height: 198px;
+  margin: auto;
+}
+/* Positioning */
+.g-layout-absolute-wrapper > .left {
+  left: 0;
+  right: auto;
+  margin: auto auto auto 0;
+}
+.g-layout-absolute-wrapper > .right {
+  left: auto;
+  right: 0;
+  margin: auto 0 auto auto;
+}
+.g-layout-absolute-wrapper > .top {
+  top: 0;
+  bottom: auto;
+  margin: 0 auto auto auto;
+}
+.g-layout-absolute-wrapper > .bottom {
+  top: auto;
+  bottom: 0;
+  margin: auto auto 0 auto;
+}
+.g-layout-absolute-wrapper > .left.right {
+  left: 0px;
+  right: 0px;
+}
+.g-layout-absolute-wrapper > .top.bottom {
+  top: 0px;
+  bottom: 0px;
+}
+.g-layout-absolute-wrapper > .center {
+  margin: auto;
+}
+/* Loading.css */
+.g-loading {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top: 10px solid #1ddbd9;
+  border-left: 10px solid #4e4e4e;
+  border-bottom: 10px solid #4e4e4e;
+  border-right: 10px solid #4e4e4e;
+  -webkit-animation: rotation 1s infinite linear;
+  -moz-animation: rotation 1s infinite linear;
+  -o-animation: rotation 1s infinite linear;
+  animation: rotation 1s infinite linear;
+  border-radius: 100%;
+}
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotateZ(0deg);
+  }
+  to {
+    -webkit-transform: rotateZ(359deg);
+  }
+}
+@-moz-keyframes rotation {
+  from {
+    -moz-transform: rotateZ(0deg);
+  }
+  to {
+    -moz-transform: rotateZ(359deg);
+  }
+}
+@-o-keyframes rotation {
+  from {
+    -o-transform: rotateZ(0deg);
+  }
+  to {
+    -o-transform: rotateZ(359deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(359deg);
+  }
+}
+/* MultiPicker.css */
+.g-multi-picker .g-multi-picker-list {
+  background-color: #212121;
+}
+.g-multi-picker .g-multi-picker-commandbar {
+  pointer-event: auto;
+}
+/* Notification.css */
+.g-notification {
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+}
+.g-notification .g-drawer-container {
+  height: 103px;
+  overflow: hidden;
+}
+.g-notification .g-drawer-content {
+  position: absolute;
+  height: 103px;
+  pointer-events: auto;
+  color: #ffffff;
+}
+.g-notification .g-notification-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  margin: 8px auto 10px;
+}
+.g-notification .g-notification-title {
+  width: 150px;
+  margin: 0 85px;
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: clip;
+  -webkit-mask-image: -webkit-linear-gradient(left, #000000, #000000 86%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(left, #000000, #000000 86%, rgba(0, 0, 0, 0));
+}
+.g-notification .g-notification-scrim {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: 0;
+  top: 0;
+  background-color: #000000;
+  opacity: 0.94;
+  pointer-events: auto;
+}
+/* IntegerScrollPicker.css */
+.g-scroll-picker-container {
+  display: inline-block;
+}
+.g-scroll-picker {
+  height: 82px;
+  color: #ffffff;
+}
+.g-scroll-picker.selected {
+  color: #1ddbd9;
+}
+.g-scroll-picker-item {
+  white-space: nowrap;
+  height: 82px;
+  line-height: 82px;
+  vertical-align: middle;
+  text-align: center;
+  background: transparent;
+}
+/* OverflowMenu.css */
+.g-overflow-menu {
+  position: absolute;
+}
+.g-overflow-menu .g-overflow-icon {
+  width: 32px;
+  height: 32px;
+  background: url(../images/ic_action_bar_drawer.svg) no-repeat;
+}
+/* Panel.css */
+.g-panel {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.g-panelset .g-panel,
+.g-panel .g-panel {
+  width: 100%;
+  height: 100%;
+}
+/* PanelIndicator.css */
+.g-panel-indicator {
+  position: absolute;
+  width: 88px;
+  height: 8px;
+  margin: 8px 116px 0;
+  text-align: center;
+  font-size: 8px;
+  line-height: 8px;
+  -webkit-transform: scale3d(1, 1, 1);
+}
+.g-panel-indicator .g-panel-indicator-decorator {
+  height: 8px;
+}
+.g-panel-indicator .g-panel-indicator-decorator > * {
+  vertical-align: inherit;
+}
+.g-panel-indicator .g-panel-indicator-icon {
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  border-radius: 9999px;
+  background-color: #323232;
+}
+.g-panel-indicator .g-panel-indicator-icon.current {
+  background-color: #1DDBDB;
+}
+/* PanelSet.css */
+/* Panel default */
+.g-panelset {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+}
+.g-panelset .g-panelset,
+.g-panel .g-panelset {
+  width: 100%;
+  height: 100%;
+}
+.g-panelset .hidden {
+  display: none;
+  transition-duration: 0;
+  -webkit-transition-duration: 0;
+}
+.g-panelset .g-panelset-panel {
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0;
+  transition-duration: 0;
+  -webkit-transition-property: all;
+  -webkit-transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 0;
+  -webkit-transition-duration: 0;
+}
+/* Panel effect for hidden at start */
+@keyframes panel-hidden {
+  0% {
+    transform: translate3d(320px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(320px, 0px, 0px);
+  }
+}
+@-webkit-keyframes panel-hidden {
+  0% {
+    -webkit-transform: translate3d(320px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(320px, 0px, 0px);
+  }
+}
+/* Panel effect */
+@keyframes flip-vertical-from-next {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes flip-vertical-from-next {
+  0% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes flip-vertical-from-previous {
+  0% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes flip-vertical-from-previous {
+  0% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes flip-vertical-to-next {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+@-webkit-keyframes flip-vertical-to-next {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+@keyframes flip-vertical-to-previous {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+@-webkit-keyframes flip-vertical-to-previous {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  }
+}
+@keyframes flip-horizontal-from-next {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes flip-horizontal-from-next {
+  0% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes flip-horizontal-from-previous {
+  0% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@-webkit-keyframes flip-horizontal-from-previous {
+  0% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+}
+@keyframes flip-horizontal-to-next {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+@-webkit-keyframes flip-horizontal-to-next {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+@keyframes flip-horizontal-to-previous {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+@-webkit-keyframes flip-horizontal-to-previous {
+  0% {
+    -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+  100% {
+    -webkit-transform: rotate3d(0, 1, 0, 90deg);
+  }
+}
+@keyframes slide-vertical-from-next {
+  0% {
+    transform: translate3d(0px, 320px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-vertical-from-next {
+  0% {
+    -webkit-transform: translate3d(0px, 320px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes slide-vertical-from-previous {
+  0% {
+    transform: translate3d(0px, -320px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-vertical-from-previous {
+  0% {
+    -webkit-transform: translate3d(0px, -320px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes slide-vertical-to-next {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, 320px, 0px);
+  }
+}
+@-webkit-keyframes slide-vertical-to-next {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 320px, 0px);
+  }
+}
+@keyframes slide-vertical-to-previous {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, -320px, 0px);
+  }
+}
+@-webkit-keyframes slide-vertical-to-previous {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, -320px, 0px);
+  }
+}
+@keyframes slide-horizontal-from-next {
+  0% {
+    transform: translate3d(320px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-horizontal-from-next {
+  0% {
+    -webkit-transform: translate3d(320px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes slide-horizontal-from-previous {
+  0% {
+    transform: translate3d(-320px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-horizontal-from-previous {
+  0% {
+    -webkit-transform: translate3d(-320px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+}
+@keyframes slide-horizontal-to-next {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(320px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-horizontal-to-next {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(320px, 0px, 0px);
+  }
+}
+@keyframes slide-horizontal-to-previous {
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    transform: translate3d(-320px, 0px, 0px);
+  }
+}
+@-webkit-keyframes slide-horizontal-to-previous {
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(-320px, 0px, 0px);
+  }
+}
+/* Picker.css */
+.g-picker {
+  -webkit-transform: scale3d(1, 1, 1);
+}
+.g-picker .g-picker-list {
+  background-color: #212121;
+}
+.g-picker .g-picker-footer-comp {
+  width: 100%;
+  height: 72px;
+}
+.g-picker-item {
+  height: 80px;
+  line-height: 80px;
+  position: relative;
+  /* Do not omit this. It's critical */
+
+}
+.g-picker .g-picker-item-border {
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid #2F2F2F;
+  bottom: 0;
+}
+.g-picker-item .g-picker-item-title {
+  margin-left: 38px;
+  text-align: left;
+}
+.g-selection-overlay-support-scrim {
+  display: inline;
+}
+/* Popup.css */
+.g-popup {
+  font-size: 28px;
+  color: #ffffff;
+  width: 320px;
+  height: 320px;
+  background-color: #000000;
+  opacity: 0.94;
+  text-align: center;
+  -webkit-clip-path: circle(160px, 160px, 160px);
+}
+.g-popup .g-page-indicator-image {
+  width: 262px;
+  height: 60px;
+  background-size: 262px 60px;
+}
+.g-popup.g-full-toast {
+  width: 280px;
+  height: 280px;
+  -webkit-clip-path: circle(140px, 140px, 140px);
+  font-size: 24px;
+  line-height: 27px;
+  white-space: pre-wrap;
+}
+.g-popup.g-half-toast {
+  background-color: transparent;
+  font-size: 24px;
+  line-height: 27px;
+  white-space: pre-wrap;
+}
+/* ProgressBar.css */
+.g-progress-bar {
+  position: relative;
+  height: 10px;
+  background-color: #4e4e4e;
+  border-radius: 20px;
+}
+.g-progress-bg-bar {
+  height: 100%;
+  background-color: #666666;
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+}
+.g-progress-bar-bar {
+  height: 100%;
+  background-color: #1ddbd9;
+  position: absolute;
+  top: 0;
+  border-radius: 20px;
+}
+/* Scrim.css */
+.g-scrim {
+  /* FIXME : position: absolute; */
+
+  z-index: 1;
+  /*
+		note: by using pointer-events we allow tapping on scrim
+		while it is fading out; however, this requires any showing classes
+		to set pointer events to auto or scrim will not function as expected.
+	*/
+
+  pointer-events: none;
+}
+.g-scrim.g-scrim-translucent {
+  pointer-events: auto;
+  background-color: #000000;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.g-scrim.g-scrim-transparent {
+  pointer-events: auto;
+  background: transparent;
+}
+/* Scroller.css for g.Scroller, g.ScrollStrategy and g.ScrollThumb */
+/* CSS for g.Scroller */
+.g-scroller {
+  overflow: hidden;
+}
+/* CSS for g.CircularThumb */
+.g-scroller-circluarthumb {
+  position: absolute;
+  top: 0;
+  z-index: 500;
+  pointer-events: none;
+}
+/* ScrollIndicator.css */
+.g-pre-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  height: 30px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* FF3.6+ */
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));
+  /* Chrome,Safari4+ */
+
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Opera 11.10+ */
+
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* IE10+ */
+
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C */
+
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+
+}
+.g-next-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  width: 100%;
+  height: 30px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.65)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+/* SelectionOverlaySupport.css */
+.selection-enabled .g-selection-overlay-support.selected .g-selection-overlay-support-scrim {
+  display: block;
+}
+.selection-enabled .g-selection-overlay-support.selected .g-icon-button {
+  background-color: #212121;
+  border-color: #212121;
+  background-position: 0 -48px;
+}
+.selection-enabled .g-selection-overlay-support .g-icon-button {
+  background-color: #212121;
+  border-color: #212121;
+  border-radius: 0;
+}
+.g-selection-overlay-support-scrim {
+  display: none;
+  z-index: 100000;
+}
+.g-selection-overlay-support-scrim .g-selection-overlay-support-checkbox {
+  position: absolute;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+.enyo-locale-right-to-left .g-selection-overlay-support-scrim .g-selection-overlay-support-checkbox {
+  margin-left: initial;
+  margin-right: -24px;
+}
+/* Spinner.css */
+.g-spinner {
+  border-radius: 96px;
+  height: 96px;
+  min-width: 96px;
+  display: inline-block;
+  background: transparent url(../images/spinner.gif) no-repeat;
+  color: #ffffff;
+  line-height: 96px;
+}
+.g-spinner.content {
+  padding-left: 100px;
+  height: g-spinner-size;
+  line-height: g-spinner-size;
+}
+/* TimePickerPanel.css */
+.g-time-picker-panel {
+  position: relative;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.g-time-picker-panel .g-knob-container {
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+}
+.g-time-picker-panel .g-knob-body {
+  opacity: 0.5;
+}
+.g-time-picker-panel .g-knob-body.g-big-dot {
+  margin-top: -10px;
+}
+.g-time-picker-panel .g-hour-text {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  line-height: 70px;
+  color: #ffffff;
+  left: 23%;
+  top: 27%;
+  font-size: 72px;
+}
+.g-time-picker-panel .g-hour-text.active {
+  color: #66ffff;
+}
+.g-time-picker-panel .g-colon-text {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  line-height: 70px;
+  color: #ffffff;
+  left: 47%;
+  top: 27%;
+  font-size: 72px;
+}
+.g-time-picker-panel .g-minute-text {
+  position: absolute;
+  width: 80px;
+  height: 70px;
+  line-height: 70px;
+  color: #ffffff;
+  right: 22%;
+  top: 27%;
+  font-size: 72px;
+}
+.g-time-picker-panel .g-minute-text.active {
+  color: #66ffff;
+}
+.g-time-picker-panel .g-meridiem-text {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  color: #333333;
+  left: 43%;
+  bottom: 40%;
+  font-size: 32px;
+}
+.g-time-picker-panel .g-ok-image {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  right: 24%;
+  bottom: 18%;
+  background: url(../images/ic_done.svg) no-repeat;
+}
+.g-time-picker-panel .g-cancel-image {
+  width: 72px;
+  height: 72px;
+  position: absolute;
+  left: 24%;
+  bottom: 18%;
+  background: url(../images/ic_close.svg) no-repeat;
+}
+.g-time-picker-panel .g-hour-label {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+.g-time-picker-panel .g-minute-label {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+}
+.g-time-picker-panel .g-dot-label {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  margin: 22px;
+  line-height: 50px;
+  background-color: #494949;
+  border-radius: 50%;
+  text-align: center;
+}
+/* Title.css */
+.g-title {
+  position: absolute;
+}
+.g-title .g-drawer-content {
+  width: 148px;
+  margin: 23px 86px 0;
+  font-size: 20px;
+  overflow: hidden;
+  text-overflow: clip;
+  -webkit-mask-image: -webkit-linear-gradient(left, #000000, #000000 86.48%, rgba(0, 0, 0, 0));
+  -webkit-mask-image: linear-gradient(left, #000000, #000000 86.48%, rgba(0, 0, 0, 0));
+}
+/* Toast.css */
+.g-toast {
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  opacity: 0.94;
+}
+.g-toast .g-drawer-content {
+  display: block;
+  width: 320px;
+  height: 54px;
+  margin: 6px 0 22px;
+  background-color: #000000;
+  overflow: hidden;
+  font-size: 24px;
+  line-height: 27px;
+  white-space: pre-wrap;
+}
+.g-toast.one-line .g-drawer-content {
+  height: 27px;
+  margin: 20px 0 35px;
+}
+.g-toast .padding-left-top {
+  display: block;
+  width: 60px;
+  height: 27px;
+  clear: left;
+  float: left;
+}
+.g-toast .padding-right-top {
+  display: block;
+  width: 60px;
+  height: 27px;
+  clear: right;
+  float: right;
+}
+.g-toast .padding-left-bottom {
+  display: block;
+  width: 90px;
+  height: 27px;
+  clear: left;
+  float: left;
+}
+.g-toast .padding-right-bottom {
+  display: block;
+  width: 90px;
+  height: 27px;
+  clear: right;
+  float: right;
+}
+/* ToastPopup.css */
+.g-toast-popup .g-toast-popup-full {
+  width: 244px;
+  height: 81px;
+  margin: 99px 18px;
+  overflow: hidden;
+}
+.g-toast-popup .g-toast-popup-half-container {
+  width: 320px;
+  height: 160px;
+  margin-top: 160px;
+  overflow: hidden;
+}
+.g-toast-popup .g-toast-popup-half-circle {
+  width: 320px;
+  height: 320px;
+  background-color: #000000;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.g-toast-popup .g-toast-popup-half-text-area {
+  width: 200px;
+  height: 81px;
+  margin: 41px 60px 38px;
+  overflow: hidden;
+}
+/* Toggle.css */
+/* Wheel.css */
+/* g.Wheel */
+.g-wheel {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 50%;
+}
+/* g.Arc */
+.g-arc {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.g-arc .g-circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 50%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+.g-arc .g-arc-window {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.g-arc .g-arc-left {
+  transform-origin: right center;
+  -webkit-transform-origin: right center;
+}
+.g-arc .g-arc-right {
+  left: 50%;
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+}
+.g-arc .g-arc-left .g-circle {
+  left: -100%;
+}
+.g-arc-half {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.g-arc .g-arc-right .g-arc-half {
+  left: -100%;
+  transform-origin: right center;
+  -webkit-transform-origin: right center;
+}
+.g-arc .g-arc-left .g-arc-half {
+  left: 100%;
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+}
+/* g.Knob */
+.g-knob-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.g-knob-container > .g-knob-body {
+  margin: auto;
+  border-radius: 50%;
+}
+/* WheelDataListController.css */
+.g-wheel-list-controller {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+}
+.g-panel .g-wheel-list-controller {
+  pointer-events: none;
+}
+.g-wheel-list-controller > .g-circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.g-wheel-list-controller > .g-knob-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.g-wheel-list-controller > .g-knob-wrapper > .g-knob {
+  margin: auto;
+  border-radius: 50%;
+}
+/* WheelSectionBG.css */
+.g-wheel-index-bg {
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  height: 320px;
+}
+.g-wheel-index-bg .g-wheel-index-bg-svg {
+  position: absolute;
+}
+/* WheelPicker.css */
+.g-wheelpicker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.g-wheelpicker > .g-circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 50%;
+}
+.g-wheelpicker > .g-knob-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.g-wheelpicker > .g-knob-wrapper > .g-knob {
+  margin: auto;
+  border-radius: 50%;
+}
+/* WheelPickerController.css */
+.g-wheel-picker-controller {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+}
+.g-panel .g-wheel-picker-controller {
+  pointer-events: none;
+}
+/* WheelSectionListController.css */
+.g-wheel-section-list-controller {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  top: 0;
+  pointer-events: none;
+}
+.g-panel .g-wheel-section-list-controller {
+  pointer-events: none;
+}
+.g-wheel-section-list-controller > .g-circle {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-radius: 50%;
+}
+.g-wheel-section-list-controller > .g-knob-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.g-wheel-section-list-controller > .g-knob-wrapper > .g-knob {
+  margin: auto;
+  border-radius: 50%;
+}
+.g-wheel-section-list-controller .g-section-label {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  text-align: center;
+  font-size: 16px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.g-wheel-section-list-controller .g-index-popup {
+  width: 320px;
+  height: 320px;
+}
+.g-wheel-section-list-controller .g-index-popup-bg {
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  border-radius: 60px;
+  display: inline-block;
+  background: #1DDBD9;
+  opacity: 0.5;
+}
+.g-wheel-section-list-controller .g-index-popup-content {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: inline-block;
+  line-height: 320px;
+  text-align: center;
+  font-size: 80px;
+  color: #ffffff;
+}
+.g-wheel-section-list-controller .g-index-popup-content-comp {
+  display: block;
+}
+/* WheelSlider.css */
+.g-wheelslider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/* WheelSliderPanel.css */
+/* g overriding classes defined here */
+/* Put this at the end because we want these to take precedence over others */

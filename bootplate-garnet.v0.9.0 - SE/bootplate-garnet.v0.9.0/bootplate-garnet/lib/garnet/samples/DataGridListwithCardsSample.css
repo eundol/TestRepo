@@ -1,0 +1,22 @@
+/* DataGridListwithCardsSample.css */
+
+.g-gridlist-imageitem{
+}
+.g-gridlist-imageitem img {
+	display: block;
+	width: 212px;
+	height: 212px;
+}
+.g-gridlist-imageitem.disabled {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+/* GridList Imageitem */
+.selection-enabled .g-selection-overlay-support.selected .g-icon-button {
+	background-color: transparent;
+}
+.g-selection-overlay-support-scrim .g-selection-overlay-support-checkbox {
+	position: absolute;
+	margin-top: 0;
+	margin-left: 0;
+}

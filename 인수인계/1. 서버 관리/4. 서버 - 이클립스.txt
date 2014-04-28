@@ -1,0 +1,30 @@
+Dashboard, ProfileViewer, Test Report Charts 등 여러 웹서비스를 10.177.234.48 서버의 이클립스에 띄워놓았습니다.
+
+기본적으로 주소가 
+
+http://10.177.234.48:8080/서비스URL 이지만 현재 iptables 셋팅을 통해 http://10.177.234.48/서비스URL 로 접근해도 자동으로 8080포트로 Redirect 됩니다.
+(설정방법 참고 : http://eundol23.egloos.com/213740)
+
+또 10.177.234.48 IP가 profilevu.lge.com 으로 도메인 등록이 되어있기 때문에
+
+1) http://profilevu.lge.com/서비스URL
+2) http://10.177.234.48/서비스URL
+3) http://10.177.234.48:8080/서비스URL
+
+위 세개의 링크가 모두 같은 페이지로 연결됩니다.
+
+
+=== 현재 Web Project 목록 ===
+
+Dashbaord[/dashboard] : Gerrit DB를 활용한 Dashboard
+EnyoTest[/enyotest] : Moonstone API Test Dashboard
+Garnet[/Garnet] : Garnet Test App을 웹으로 서비스
+Moonstone[/moonstone] : Moonstone Test App을 웹으로 서비스
+SystemProfiler[/report] : ProfileViewer 서비스
+SystemProfiler2[/] : ProfileViewer 서비스 (위 프로젝트와 동일하나 context path만 다름)
+Tracker[/tracker] : Jira DB를 활용한 Dashboard
+W2DashBoard[/w2] : W2 개발 관련 테스트 Dashboard (현재는 차트만 URL을 받아서 WIKI에 Iframe으로 넣는 형태로 사용)
+W2DashBoard-Luna[/w2/luna] : W2 개발 관련 테스트 중 Luna부분 Dashboard (현재는 차트만 URL을 받아서 WIKI에 Iframe으로 넣는 형태로 사용)
+
+Web Project 형상관리는 제 노트북에 SVN을 설치하여 관리하였는데 이제 그럴 수 없으므로.. 현재 서버에 있는 소스를 바탕으로 새롭게 구성하셔야 합니다.
+SVN은 VisualSVN Server Manager를 사용했습니다. 

@@ -1,0 +1,13 @@
+CPU 탭 가이드 : http://collab.lge.com/main/display/RCRTP/Profile+Viewer+Reporter
+CPU 데이터가 적절한 참고 URL : http://profilevu.lge.com:8080/report/getsection?id=625&section=cpu
+
+위키 페이지를 보시면 대부분 이해가 되실것 같습니다.
+
+하이차트 4개와 테이블(쌩 HTML로 하느라 힘들었습니다) 1개, 그리고 CSV와 XML로 데이터를 떨구는 기능이 포함되어 있습니다.
+
+모두 개별 Iframe에 servlet을 적용하여 DB가서 데이터를 물어옵니다.
+(테이블이 조금 복잡할 수 있는데 기존 테이블에서 기능이 추가되어 그렇습니다.)
+
+모두 원리는 다 똑같이 Servlet -> JSP입니다. 
+경우에 따라 보여지는 Target Frame이 다를 수 있는게 그런 것은 자바스크립트로 처리한 것입니다.
+(웹페이지이기 때문에 자바스크립트 + CSS는 기본적으로 많이 사용되고 있습니다.)

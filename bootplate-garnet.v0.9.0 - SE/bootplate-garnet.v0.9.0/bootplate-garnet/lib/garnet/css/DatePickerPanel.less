@@ -1,0 +1,59 @@
+/* DatePickerPanel.css */
+
+.g-date-picker {
+	position: relative;
+	width: 220px;
+	height: 220px;
+
+	text-align: center;
+}
+.g-date-picker .g-date-picker-wrap {
+	position: absolute;
+	height: 78px;
+}
+.g-date-picker .g-date-picker-wrap.year {
+	width: 100%;
+	top: 0px;
+	left: 0;
+	right: 0;
+}
+.g-date-picker .g-date-picker-wrap.month {
+	width: 50%;
+	top: 60px;
+	left: 0;
+	right: 50%;
+	text-align: right;
+}
+.g-date-picker .g-date-picker-wrap.day {
+	width: 50%;
+	top: 60px;
+	left: 50%;
+	right: 0;
+	text-align: left;
+}
+.g-date-picker .g-date-picker-field  {
+	height: 78px;
+	margin: 12px;
+	line-height: 78px;
+	font-size: @g-date-picker-date-font-size;
+	color: @g-white;
+}
+.g-date-picker .g-date-picker-field.selected {
+	color: @g-color-point;
+}
+.g-date-picker .g-ok-image {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	right: 30px;
+	bottom: 0;
+	background: @g-icon-done no-repeat;
+}
+.g-date-picker .g-cancel-image {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	left: 30px;
+	bottom: 0;
+	background: @g-icon-close no-repeat;
+}

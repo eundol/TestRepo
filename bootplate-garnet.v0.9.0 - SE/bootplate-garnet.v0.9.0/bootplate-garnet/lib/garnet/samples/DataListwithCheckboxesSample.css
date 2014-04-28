@@ -1,0 +1,39 @@
+/* DataListwithCehckboxesSample.css */
+
+.g-sample-list-item {
+	height: 80px;
+	line-height: 80px;
+
+}
+.g-sample-list-item-title {
+	display: inline;
+	margin-left: 10px;
+}
+.g-sample-list-item-genre {
+	position: absolute;
+	display: inline;
+	padding-right: 10px;
+	right: 35px;
+	font-size: 12pt;
+	font-style: italic;
+}
+.g-sample-margin-right {
+	margin-right: 20px;
+}
+/* Checkbox Item */
+.g-datalist-checkbox-item{
+	height: 80px;
+	line-height: 80px;
+	position: relative; /* Do not omit this. It's critical */
+}
+.g-datalist-checkbox-item .checkbox-item-title {
+	margin-left: 96px;
+}
+.g-datalist-checkbox-item.disabled {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+/* This for always showing checkbox */
+.g-selection-overlay-support-scrim {
+	display: inline;
+}

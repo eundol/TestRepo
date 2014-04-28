@@ -1,0 +1,5 @@
+http://profilevu.lge.com:8080/report/information.jsp
+
+처음 웹개발 시작하면서 VCC때 배운것 리마인드 차원에서 실습 삼아 만들어 놓은 간단한 Board 입니다.
+
+이 페이지에는 JSTL이 사용되었지만 다른 페이지에는 주로 사용하진 않았습니다.

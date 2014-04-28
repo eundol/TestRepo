@@ -1,0 +1,9 @@
+{
+	"sourcePath":"../../..",
+	"name": "Garnet",
+	"ns": "garnet.sample",
+	"loadPackages": "$lib/garnet $lib/garnet/samples",
+	"samples": [
+		{"name": "EnyoControlSample", "path":"$lib/moonstone/samples/EnyoControlSample"}
+	]
+}

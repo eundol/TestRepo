@@ -1,0 +1,252 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.*"%>
+<%@ page import="entity.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html style="height:98%; overflow:hidden">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Performance Test :: LG Electronics</title>
+<script src="./js/jquery-1.4.4.min.js"></script>
+<script src="./js/highcharts.js"></script>
+<script src="./js/highcharts-more.js"></script>
+<script src="./js/modules/exporting.js"></script>
+</head>
+<%
+	ArrayList<PerfInfo> list = (ArrayList<PerfInfo>)request.getAttribute("PerfInfo");
+
+	//categories
+	ArrayList<String> imageList = new ArrayList<String>();
+	for(int i = 0; i < list.size(); i++){
+		String image = list.get(i).getImage_name();
+		boolean duplicationFlag = false;
+		for(int j = 0; j < imageList.size(); j++){
+			if(image.equals(imageList.get(j))){
+				duplicationFlag = true;
+			}
+		}
+		if(!duplicationFlag){
+			imageList.add(image);
+		}
+	}
+	String categories = "";
+	for(int i = 0; i < imageList.size(); i++){
+		categories += "'" + imageList.get(i).replace(".tootfs.ext4", "") + "',";
+	}
+	categories = categories.substring(0,categories.length()-1);
+	
+	//detail
+	ArrayList<String> detailList = new ArrayList<String>();
+	for(int i = 0; i < list.size(); i++){
+		String detail = list.get(i).getDetail();
+		boolean duplicationFlag = false;
+		for(int j = 0; j < detailList.size(); j++){
+			if(detail.equals(detailList.get(j))){
+				duplicationFlag = true;
+			}
+		}
+		if(!duplicationFlag){
+			detailList.add(detail);
+		}
+	}
+	
+	// index 0
+	String index0Data = "";
+	for(int i = 0; i < list.size(); i++){
+		if(list.get(i).getDetail().equals(detailList.get(0))){
+			index0Data += list.get(i).getDuration() + ",";
+		}
+	}
+	index0Data = index0Data.substring(0,index0Data.length()-1);
+	
+	String index1Data = "";
+	for(int i = 0; i < list.size(); i++){
+		if(list.get(i).getDetail().equals(detailList.get(1))){
+			index1Data += list.get(i).getDuration() + ",";
+		}
+	}
+	index1Data = index1Data.substring(0,index1Data.length()-1);
+	
+%>
+<body style="height:100%;">
+<script type="text/javascript">
+$(function () {
+	// Radialize the colors
+	Highcharts.getOptions().colors = Highcharts.map(Highcharts.getOptions().colors, function(color) {
+	    return {
+	        radialGradient: { cx: 0.5, cy: 0.3, r: 0.7 },
+	        stops: [
+	            [0, color],
+	            [1, Highcharts.Color(color).brighten(0.1).get('rgb')] // darken
+	        ]
+	    };
+	});
+    // Create the chart
+    $('#perf_booting_time_line').highcharts({
+    	credits: {
+			  /* enabled : false */	   
+  		text: 'SWP lab.',
+  		href: 'javascript:window.open("http://collab.lge.com/main/pages/viewpage.action?pageId=6391855");'
+	    },
+	    chart: {
+            type: 'spline'
+        },
+        title: {
+            text: 'App Luanch Time Summary',
+            y: 16,
+        },
+        subtitle: {
+            /* text: 'Irregular time data in Highcharts JS', */
+        }, 
+        xAxis: {
+        	categories: [<%=categories%>]
+        },
+        yAxis: {
+            title: {
+                text: 'sec',
+                style: {
+                    color: '#4572A7',
+                    fontSize: '15px',
+                }
+            },
+            min: 0,
+        },
+        tooltip: {
+        	valueSuffix: ' sec'
+        },
+        plotOptions: {
+        	spline:{
+		        dataLabels: {
+		    		enabled: true,
+		    		/* color: '#ECEC00', */
+		    		color: 'black',
+		    		format: '{y}s',
+		    		style: {
+		    			/* textShadow: '0 0 1px white, 0 0 1px white', */
+		    			/* textShadow: '-1px 0 #FCEA0A, 0 1px #FCEA0A, 1px 0 #FCEA0A, 0 -1px #FCEA0A', */
+		    			fontSize: '13px',
+		    			textShadow: '-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white',
+		    		}
+		        },
+		        shadow:true
+        	}
+        },
+        series: [
+                 {
+		            name: '<%=detailList.get(0)%>',
+		            data: [<%=index0Data%>]
+		         },
+		         {
+		            name: '<%=detailList.get(1)%>',
+		            data: [<%=index1Data%>]
+		         },
+        ]
+    });
+});
+
+/**
+ * Grid theme for Highcharts JS
+ * @author Torstein Honsi
+ */
+
+Highcharts.theme = {
+   colors: ['#058DC7', '#ED561B', '#50B432', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#FFF263', '#6AF9C4'],
+   chart: {
+      backgroundColor: {
+         linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
+         stops: [
+            [0, 'rgb(255, 255, 255)'],
+            [1, 'rgb(240, 240, 255)']
+         ]
+      },
+      borderWidth: 2,
+      plotBackgroundColor: 'rgba(255, 255, 255, .9)',
+      plotShadow: true,
+      plotBorderWidth: 1
+   },
+   title: {
+      style: {
+    	  color: '#000',
+          font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
+      }
+   },
+   subtitle: {
+      style: {
+         color: '#666666',
+         /* font: 'bold 12px "Trebuchet MS", Verdana, sans-serif' */
+      }
+   },
+   xAxis: {
+      gridLineWidth: 1,
+      lineColor: '#000',
+      tickColor: '#000',
+      labels: {
+         style: {
+            color: '#000',
+            font: '11px Trebuchet MS, Verdana, sans-serif'
+         }
+      },
+      title: {
+         style: {
+            color: '#333',
+            fontWeight: 'bold',
+            fontSize: '12px',
+            fontFamily: 'Trebuchet MS, Verdana, sans-serif'
+
+         }
+      }
+   },
+   yAxis: {
+      minorTickInterval: 'auto',
+      lineColor: '#000',
+      lineWidth: 1,
+      tickWidth: 1,
+      tickColor: '#000',
+      labels: {
+         style: {
+            color: '#000',
+            font: '11px Trebuchet MS, Verdana, sans-serif'
+         }
+      },
+      title: {
+         style: {
+            color: '#333',
+            fontWeight: 'bold',
+            fontSize: '12px',
+            fontFamily: 'Trebuchet MS, Verdana, sans-serif'
+         }
+      }
+   },
+   legend: {
+      itemStyle: {
+         font: '9pt Trebuchet MS, Verdana, sans-serif',
+         color: 'black'
+
+      },
+      itemHoverStyle: {
+         color: '#039'
+      },
+      itemHiddenStyle: {
+         color: 'gray'
+      }
+   },
+   labels: {
+      style: {
+         color: '#99b'
+      }
+   },
+
+   navigation: {
+      buttonOptions: {
+         theme: {
+            stroke: '#CCCCCC'
+         }
+      }
+   }
+};
+
+// Apply the theme
+var highchartsOptions = Highcharts.setOptions(Highcharts.theme);
+</script>
+<div id="perf_booting_time_line" style="width: 98%; height: 97%; margin: 0 auto"></div>
+</body>
+</html>

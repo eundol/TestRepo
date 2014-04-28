@@ -1,0 +1,33 @@
+/* Popup.css */
+
+.g-popup {
+	font-size: @g-popup-font-size;
+	color: @g-default-font-color;
+	width: @g-width;
+	height: @g-height;
+	background-color: #000000;
+	opacity: 0.94;
+	text-align: center;
+	-webkit-clip-path: circle(160px, 160px, 160px);
+}
+.g-popup .g-page-indicator-image {
+	width: @g-width * 0.81875;
+	height: @g-height * 0.1875;
+	background-size:@g-width * 0.81875 @g-height * 0.1875;
+}
+.g-popup.g-full-toast {
+	width: 280px;
+	height: 280px;
+	-webkit-clip-path: circle(140px, 140px, 140px);
+
+	font-size: @g-toast-content-font-size;
+	line-height: 27px;
+	white-space: pre-wrap;
+}
+.g-popup.g-half-toast {
+	background-color: transparent;
+
+	font-size: @g-toast-content-font-size;
+	line-height: 27px;
+	white-space: pre-wrap;
+}

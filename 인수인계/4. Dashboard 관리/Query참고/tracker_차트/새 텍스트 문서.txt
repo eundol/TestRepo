@@ -1,0 +1,4 @@
+SELECT m.project
+FROM master_project m
+WHERE m.dp_project LIKE '차세대 TV Middleware 기술 개발 외 1'
+GROUP BY m.project;

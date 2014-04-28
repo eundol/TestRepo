@@ -1,0 +1,28 @@
+Enyo App은 WebOS 기반으로 앱 UI를 편하게 코딩할 수 있도록 되어 있습니다.
+(오픈소스 입니다. http://enyojs.com/)
+
+Garnet은 Enyo를 기반으로 WD(시계)에 맞게 개발한 UI 라이브러리 입니다.
+
+취향에 맞는 텍스트 에디터를 쓰시면 됩니다. 저는 notepad++를 사용하였고, sublime text2가 가장 널리 쓰입니다.
+
+enyo는 자바스크립트 기반이며 객체지향적인 특징을 가지고 있습니다.
+- enyo kind 선언시 name을 가지게 되는데 그 name을 이용해 재사용이나 상속 등을 할 수 있습니다.
+
+직접 코드를 보시면서 해보시는게 가장 빠를 것 같다고 생각합니다.
+
+간략하게 설명해드리면..
+name > kind의 name (중복되면 안됨)
+classes > 클래스 정보(css 디자인)
+kind > 부모 객체, 지정 안하면 control(기본)로 셋팅됨
+handler > kind 내에서 이벤트를 처리
+conmponents > kind가 소유한 컴포넌트들 (무한 확장이 가능)
+ontap, onScrollStart, onClick 등등 > 해당 컴포넌트에 이벤트를 지정
+kind내에 function을 만들어 호출할수도 있습니다.
+function 중에 create는 기본 function으로 앱 로딩시 최초 1회만 실행되는 부분입니다.
+
+test app을 만들때는 먼저 test-apps 폴더 안에서 html과 js를 만들어 (예 - ButtonTest.html, ButtonTest.js) 앱을 작성합니다.
+이때 package에 꼭 js를 추가해 주어야 합니다.
+package는 import 개념으로 목록에 추가해 주지 않으면 bootplate에서 인식하지 못합니다.
+
+그리고 완성한 후에는 상위 폴더의 GarnetTest.js에 해당 앱의 name을 등록합니다.
+GarnetTest.js는 테스트 앱들을 모아놓은 앱입니다.

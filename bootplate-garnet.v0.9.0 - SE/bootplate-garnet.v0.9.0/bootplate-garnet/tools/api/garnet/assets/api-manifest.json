@@ -1,0 +1,9 @@
+{
+	"version": "2.3.0",
+	"packages": [
+		{"name": "enyo", "path": "../../../enyo/source"},
+		{"name": "garnet", "path": "../../../lib/garnet"},
+		{"name": "ilib", "path": "../../../lib/enyo-ilib"}
+		
+	]
+}

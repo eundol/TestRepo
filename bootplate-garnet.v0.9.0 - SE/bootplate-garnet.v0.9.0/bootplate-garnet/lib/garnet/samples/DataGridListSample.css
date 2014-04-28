@@ -1,0 +1,38 @@
+/* DataGridListwithCardsSample.css */
+
+.g-gridlist-imageitem{
+	width: 110px;
+	margin-left: 10px;
+}
+.g-gridlist-imageitem img {
+	display: block;
+	width: 107px;
+	height: 107px;
+}
+.g-gridlist-imageitem .caption{
+	text-align: center;
+	font-size: 13pt;
+	z-index: 10;
+	padding-top: 3px;
+	width: 80%;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #FFFFFF;
+}
+.g-gridlist-imageitem.disabled {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+/* GridList Imageitem */
+.selection-enabled .g-selection-overlay-support.selected .g-icon-button {
+	background-position: 0 -107px;
+	background-color: transparent;
+}
+.g-selection-overlay-support-scrim .g-selection-overlay-support-checkbox {
+	position: absolute;
+	width: 107px;
+	height: 107px;
+	margin-top: 0;
+	margin-left: 0;
+}

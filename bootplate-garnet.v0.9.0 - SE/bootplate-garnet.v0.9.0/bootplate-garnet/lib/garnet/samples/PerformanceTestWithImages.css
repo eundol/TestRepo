@@ -1,0 +1,13 @@
+/* OverflowMenuSample.css */
+
+.g-picker-item{
+	height: 80px;
+	line-height: 80px;
+	position: relative; /* Do not omit this. It's critical */
+}
+.g-test-container {
+	width: 200px;
+	height: 72px;
+	margin-top: 14px;
+	pointer-events: none;
+}

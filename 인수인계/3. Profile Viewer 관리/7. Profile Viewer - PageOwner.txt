@@ -1,0 +1,20 @@
+PageOwner 가이드 : http://collab.lge.com/main/display/RCRTP/Page+owner+Memory+Profiling
+PageOwner 샘플 URL : http://profilevu.lge.com:8080/report/getsection?id=736&section=pageowner
+
+PageOwner는 Profile Viewer에 포함되어 있지만 앞선 CPU / Memory / IO와는 다른 프로젝트 입니다.
+PageOwner가 그냥 Profile Viewer에 빌붙어 있다고 보시면 됩니다.
+
+이대리님께서 손정수선임(PageOwner 담당)과 커뮤니케이션 하시면서 데이터추출 후 필터링, DB Insert까지 만들고 계십니다.
+요구사항이 계속 들어오고 실제 사용 후 FeedBack 이 있는 부분 이므로 가장 중요한 탭이 되겠습니다.
+
+화면을 보시면 하이차트 두개와 테이블 두개로 이루어져 있습니다.
+이 테이블은 2013년 KT과제에서 사용했던 SmartClient에서 제공하는 테이블입니다.
+Data는 Servlet에서 XML로 만들어 넣었고 최대한 SmartClient에서 지원하는 옵션들을 사용해 보기편하게 만드려고 하였습니다. 
+(그럼에도 불구하고 아직 부족한점은 많습니다.)
+
+두 테이블 모두 특정 칼럼을 기준으로 그룹핑 되어 있습니다. (user : pid, kernel : purpose)
+테이블 사용법은 간단해서 직접 조작하시면 이해가 되실듯 합니다.
+Smartclient 사이트 : http://smartclient.com/
+Smartclinet Demo : http://smartclient.com/#Welcome
+
+- 참고로 현재 프로젝트에 포함되어 있는 Smartclient 소스는 Full Source는 아니고 작년 KT때 쓰던 축소된 소스입니다.

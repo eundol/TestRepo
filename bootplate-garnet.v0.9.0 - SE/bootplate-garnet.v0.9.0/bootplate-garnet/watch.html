@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Watch Simulator</title>
+	<link rel="shortcut icon" href="assets/favicon.ico"/>
+	<!-- -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="watch/watch.css" />
+	<script type="text/javascript" src="watch/watch.js"></script>
+</head>
+<body class="enyo-unselectable">
+	<iframe id="webapp" src="debug.html" onload="iframeLoaded()"></iframe>
+	<div class="background"></div>
+	<div class="btn-up" onclick="clickBtnUp()"></div>
+	<div class="btn-center" onclick="clickBtnCenter()"></div>
+	<div class="btn-down" onclick="clickBtnDown()"></div>
+	<div class="simulator-button-layout">
+		<button onclick="function1()">Function 1</button><br />
+		<button onclick="function2()">Function 2</button><br />
+	</div>
+</body>
+</html>

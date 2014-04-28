@@ -1,0 +1,85 @@
+/* Wheel.css */
+
+/* g.Wheel */
+
+.g-wheel {
+	box-sizing: border-box;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+/* g.Arc */
+
+.g-arc {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.g-arc .g-circle {
+	box-sizing: border-box;
+	position: absolute;
+	width: 200%;
+	height: 100%;
+	border-style: solid;
+	border-radius: 50%;
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+}
+
+.g-arc .g-arc-window {
+	position: absolute;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.g-arc .g-arc-left {
+	transform-origin: right center;
+	-webkit-transform-origin: right center;
+}
+
+.g-arc .g-arc-right {
+	left: 50%;
+	transform-origin: left center;
+	-webkit-transform-origin: left center;
+}
+
+.g-arc .g-arc-left .g-circle {
+	left: -100%;
+}
+
+.g-arc-half {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.g-arc .g-arc-right .g-arc-half {
+	left: -100%;
+	transform-origin: right center;
+	-webkit-transform-origin: right center;
+}
+
+.g-arc .g-arc-left .g-arc-half {
+	left: 100%;
+	transform-origin: left center;
+	-webkit-transform-origin: left center;
+}
+
+/* g.Knob */
+
+.g-knob-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.g-knob-container > .g-knob-body {
+	margin: auto;
+	border-radius: 50%;
+}

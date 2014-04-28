@@ -1,0 +1,6 @@
+{
+	"enyo": "./enyo",
+	"packagejs": "./package.js",
+	"assets": ["./appinfo.json", "./icon.png", "./index.html", "./assets", "./resources"],
+	"libs": ["./lib/enyo-ilib", "./lib/garnet"]
+}

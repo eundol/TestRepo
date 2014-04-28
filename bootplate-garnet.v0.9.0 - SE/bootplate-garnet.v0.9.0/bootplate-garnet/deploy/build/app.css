@@ -1,0 +1,34 @@
+
+/* source\app.css */
+
+/* app.css */
+
+.g-sample-layout-section {
+	font-size: 30px;
+	color: black;
+	margin-top: 50px;
+	background-color: orange;
+}
+.g-sample-layout-comp,
+a:link,
+a:visited,
+a:hover {
+	font-size: 20px;
+	color: white;
+	font-weight: bold;
+	text-decoration:none
+}
+a:active {
+	font-size: 20px;
+	color: gray;
+	font-weight: bold;
+	text-decoration:none
+}
+.g-sample-list > * {
+	line-height: 50px;
+	width: 100%;
+	height: 320px;
+	border-bottom: 20px;
+	border-color: #AAAAAA;
+	text-align: center;
+}

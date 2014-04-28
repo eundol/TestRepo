@@ -1,0 +1,21 @@
+/* Checkbox.css */
+
+.g-checkbox {
+	cursor: pointer;
+	height: @g-checkbox-image-height;
+	width: @g-checkbox-image-width;
+	background: @g-checkbox-image no-repeat;
+	/* reset for ? */
+	margin: 0px;
+	/* these entries cause toggle-button and checkbox to line up properly*/
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.g-checkbox[checked] {
+	background-position: 0px -@g-checkbox-image-height;
+}
+
+.g-checkbox[disabled] {
+	opacity: @g-disabled-opacity;
+}

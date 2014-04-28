@@ -1,0 +1,25 @@
+/* Scrim.css */
+
+.g-scrim {
+	/* FIXME : position: absolute; */
+	z-index: 1;
+	/*
+		note: by using pointer-events we allow tapping on scrim
+		while it is fading out; however, this requires any showing classes
+		to set pointer events to auto or scrim will not function as expected.
+	*/
+	pointer-events: none;
+}
+
+@g-scrim-opacity-ie: @g-scrim-opacity*100;
+.g-scrim.g-scrim-translucent{
+	pointer-events: auto;
+	background-color: @g-scrim-background;
+	opacity: @g-scrim-opacity;
+	filter: alpha(opacity=@g-scrim-opacity-ie);
+}
+
+.g-scrim.g-scrim-transparent {
+	pointer-events: auto;
+	background: transparent;
+}

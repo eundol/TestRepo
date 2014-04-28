@@ -1,0 +1,16 @@
+/* ProgressBarTest.css
+#    @remark
+#		 - 2014. 3. 3. Initial created
+*/
+
+.progress-test .button{
+	height: 40px;
+	width: 130px;
+	font-size: 14pt;
+	margin-bottom: 5px;
+	padding: 0;
+}
+
+.progress-test .front-to-first{
+	z-index: 9999;
+}

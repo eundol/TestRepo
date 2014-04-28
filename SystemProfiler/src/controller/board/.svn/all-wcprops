@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/src/controller/board
+END
+FreeBoardWriteServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/src/controller/board/FreeBoardWriteServlet.java
+END
+FreeBoardRemoveCheckServelt.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/src/controller/board/FreeBoardRemoveCheckServelt.java
+END
+FreeBoardServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/src/controller/board/FreeBoardServlet.java
+END
+FreeBoardRemoveServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/ProfileVu/!svn/ver/14/SystemProfiler/src/controller/board/FreeBoardRemoveServlet.java
+END

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="48px" height="288px" viewBox="0 0 48 288" enable-background="new 0 0 48 288" xml:space="preserve">
+<g id="Layer_1_1_" display="none">
+	<rect display="inline" opacity="0.25" fill="#DF0088" enable-background="new    " width="48" height="48"/>
+	<rect y="48" display="inline" opacity="0.25" fill="#05DF00" enable-background="new    " width="48" height="48"/>
+	<rect y="96" display="inline" opacity="0.25" fill="#DF0088" enable-background="new    " width="48" height="48"/>
+	<rect y="144" display="inline" opacity="0.25" fill="#05DF00" enable-background="new    " width="48" height="48"/>
+	<rect y="192" display="inline" opacity="0.25" fill="#DF0088" enable-background="new    " width="48" height="48"/>
+	<rect y="240" display="inline" opacity="0.25" fill="#05DF00" enable-background="new    " width="48" height="48"/>
+</g>
+<g id="OFF_x5F_normal_copy">
+	<circle opacity="0.6" enable-background="new    " cx="24" cy="24" r="20"/>
+	<g>
+		<path fill="#FFFFFF" d="M23.999,6C33.925,6,42,14.075,42,24c0,9.925-8.075,18-18.001,18C14.074,42.002,6,33.925,6,24
+			C6,14.075,14.074,6,23.999,6 M23.999,4C12.954,4,4,12.954,4,24c0,11.044,8.954,20,19.999,20C35.046,44,44,35.045,44,24
+			C44,12.954,35.046,4,23.999,4L23.999,4z"/>
+	</g>
+</g>
+<g id="OFF_x5F_disabled_copy">
+	<g opacity="0.6">
+		<circle opacity="0.6" enable-background="new    " cx="24" cy="120" r="20"/>
+		<g>
+			<path fill="#FFFFFF" d="M23.999,102.001c9.926,0,18.001,8.075,18.001,18s-8.075,18-18.001,18C14.074,138.001,6,129.925,6,120
+				S14.074,102.001,23.999,102.001 M23.999,100.001C12.954,100.001,4,108.955,4,120c0,11.043,8.954,20,19.999,20
+				C35.046,140,44,131.045,44,120C44,108.955,35.046,100.001,23.999,100.001L23.999,100.001z"/>
+		</g>
+	</g>
+</g>
+<g id="OFF_x5F_pressed_copy">
+	<ellipse opacity="0.6" enable-background="new    " cx="23.938" cy="72.07" rx="20" ry="20.045"/>
+	<g>
+		<path fill="#FFFFFF" d="M23.936,54.029c9.925,0,18.001,8.093,18.001,18.041c0,9.948-8.076,18.041-18.001,18.041
+			C14.012,90.113,5.937,82.019,5.937,72.07C5.937,62.122,14.011,54.029,23.936,54.029 M23.936,52.025
+			c-11.044,0-19.999,8.974-19.999,20.045c0,11.07,8.954,20.045,19.999,20.045c11.046,0,20.001-8.975,20.001-20.045
+			S34.982,52.025,23.936,52.025L23.936,52.025z"/>
+	</g>
+	<g opacity="0.3">
+		<ellipse cx="24" cy="72" rx="24" ry="24"/>
+	</g>
+</g>
+<g id="ON_x5F_disabled">
+	<g opacity="0.6">
+		<circle opacity="0.6" enable-background="new    " cx="24" cy="264" r="20"/>
+		<g>
+			<path fill="#FFFFFF" d="M23.999,246C33.925,246,42,254.074,42,264s-8.075,18-18.001,18C14.074,282.002,6,273.926,6,264
+				S14.074,246,23.999,246 M23.999,244C12.954,244,4,252.955,4,264s8.954,20,19.999,20C35.046,284,44,275.045,44,264
+				S35.046,244,23.999,244L23.999,244z"/>
+		</g>
+		<circle fill="#1BBDB9" cx="24" cy="264" r="9"/>
+	</g>
+</g>
+<circle opacity="0.6" enable-background="new    " cx="23.953" cy="216.139" r="20"/>
+<g>
+	<path fill="#FFFFFF" d="M23.952,198.139c9.926,0,18.001,8.075,18.001,18c0,9.926-8.075,18.002-18.001,18.002
+		c-9.925,0-17.999-8.076-17.999-18.002C5.953,206.214,14.027,198.139,23.952,198.139 M23.952,196.139
+		c-11.045,0-19.999,8.954-19.999,20c0,11.047,8.954,20.002,19.999,20.002c11.047,0,20.001-8.955,20.001-20.002
+		C43.953,205.093,34.999,196.139,23.952,196.139L23.952,196.139z"/>
+</g>
+<circle fill="#1BBDB9" cx="23.953" cy="216.139" r="9"/>
+<g opacity="0.3">
+	<ellipse cx="24" cy="216" rx="24" ry="24"/>
+</g>
+<g id="ON_x5F_normal">
+	<circle opacity="0.6" enable-background="new    " cx="24" cy="168" r="20"/>
+	<g>
+		<path fill="#FFFFFF" d="M23.999,150C33.925,150,42,158.074,42,168s-8.075,18-18.001,18C14.074,186.002,6,177.924,6,168
+			C6,158.074,14.074,150,23.999,150 M23.999,148C12.954,148,4,156.954,4,168c0,11.045,8.954,20,19.999,20
+			C35.046,188,44,179.045,44,168C44,156.954,35.046,148,23.999,148L23.999,148z"/>
+	</g>
+	<circle fill="#1DDBD9" cx="24" cy="168" r="9"/>
+</g>
+</svg>

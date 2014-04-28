@@ -1,0 +1,29 @@
+/* PanelIndicator.css */
+
+.g-panel-indicator {
+	position: absolute;
+	width: 88px;
+	height: 8px;
+	margin: 8px 116px 0;
+	text-align: center;
+	font-size: @g-panel-indicator-font-size;
+	line-height: @g-panel-indicator-font-size;
+
+	.g-common-hw-accelerated;
+}
+.g-panel-indicator .g-panel-indicator-decorator {
+	height: 8px;
+}
+.g-panel-indicator .g-panel-indicator-decorator > * {
+	vertical-align: inherit;
+}
+.g-panel-indicator .g-panel-indicator-icon {
+	width: 8px;
+	height: 8px;
+	margin: 0 4px;
+	border-radius: 9999px;
+	background-color: #323232;
+}
+.g-panel-indicator .g-panel-indicator-icon.current {
+	background-color: #1DDBDB;
+}

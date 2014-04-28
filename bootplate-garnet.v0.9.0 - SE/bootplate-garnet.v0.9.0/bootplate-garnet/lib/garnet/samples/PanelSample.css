@@ -1,0 +1,8 @@
+/* PanelSample.css */
+
+.g-header-icon button {
+	border-radius: 9999px;
+}
+.g-header-icon button:active {
+	border-color: gray;
+}

@@ -1,0 +1,57 @@
+/* DataListwithCehckboxesSample.css */
+
+.g-sample-list-item {
+	height: 80px;
+	line-height: 80px;
+
+}
+.g-sample-list-item-title {
+	display: inline;
+	margin-left: 10px;
+}
+.g-sample-list-item-genre {
+	position: absolute;
+	display: inline;
+	padding-right: 10px;
+	right: 35px;
+	font-size: 12pt;
+	font-style: italic;
+}
+.g-sample-margin-right {
+	margin-right: 20px;
+}
+/* icon-badge-item Item */
+.g-datalist-icon-badge-item{
+	height: 80px;
+	line-height: 80px;
+	position: relative; /* Do not omit this. It's critical */
+}
+.g-datalist-icon-badge-item .icon-badge-item-title {
+	margin-left: 96px;
+}
+.g-datalist-icon-badge-item.disabled {
+	opacity: 0.4;
+	filter: alpha(opacity=40);
+}
+.g-datalist-icon-badge-item .icon-badge-item-icon {
+	position: absolute;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 15px;
+}
+.g-datalist-icon-badge-item .icon-badge-item-new-icon {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: 55px;
+	margin-top: 10px;
+	background-image: url("./assets/badge_unread.svg");
+}
+.g-datalist-icon-badge-item .icon-badge-item-info-icon {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	margin-left: 55px;
+	margin-top: 40px;
+	background-image: url("assets/badge_extra_info.svg");
+}

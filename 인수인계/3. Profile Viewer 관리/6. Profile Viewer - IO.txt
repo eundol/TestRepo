@@ -1,0 +1,8 @@
+IO 탭 가이드 : http://collab.lge.com/main/display/RCRTP/Profile+Viewer+Reporter
+IO 데이터가 적절한 참고 URL : http://profilevu.lge.com:8080/report/getsection?id=21&section=io
+
+위키 페이지를 보시면 대부분 이해가 되실것 같습니다.
+
+가장 신경을 못쓴 곳입니다 ㅠ_ㅠ
+하이차트 2개가 사용되었는데
+오른쪽 범례부분 구현하는게 좀 힘들었습니다. 차트에 줌기능을 추가하였습니다.

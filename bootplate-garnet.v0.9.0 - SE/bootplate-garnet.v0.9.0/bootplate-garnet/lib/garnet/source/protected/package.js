@@ -1,0 +1,15 @@
+enyo.depends(
+	"ButtonIconBase.js",
+	"CircularThumb.js",
+	"DateTimePickerBase.js",
+	"Drawer.js",
+	"FlyweightRepeater.js",
+	"TimePickerController.js",
+	"IntegerScrollPicker.js",
+	"Scrim.js",
+	"ScrollIndicator.js",
+	"ScrollStrategy.js",
+	"Wheel.js",
+	"WheelGesture.js",
+	"WheelSectionBG.js"
+);

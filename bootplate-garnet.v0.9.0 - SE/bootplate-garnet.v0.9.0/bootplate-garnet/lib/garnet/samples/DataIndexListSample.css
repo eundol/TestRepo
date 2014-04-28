@@ -1,0 +1,16 @@
+/* DataIndexListSample.css */
+
+.g-sample-list-item {
+}
+.g-sample-list-item-title {
+	width: 260px;
+	height: 80px;
+	line-height: 80px;
+	margin-left: 30px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.g-sample-margin-right {
+	margin-right: 20px;
+}

@@ -1,0 +1,28 @@
+URL : http://10.177.234.48/enyotest  DB : enyo_test
+
+Enyotest 대쉬보드는 Moonstone 테스트 시 결과 리포트를 위해 만들었던 페이지 입니다.
+하이차트 2개와.. 결과 문서 다운로드 부분으로 나뉘어 있습니다.
+
+차트부분은 component를 선택해서 보여줄수 있도록 만들었습니다. (자바스크립트로 src를 변경하는 형태)
+ex) 10.177.234.48/flowchart?component=ChannelInfo
+
+DB도 테이블 하나만 바라보고 있기때문에 웹 코드 쪽은 쉽게 이해하실수 있을 것 같습니다.
+
+아래쪽 결과문서 부분은 특정 폴더의 파일들을 읽어와서 For문으로 목록(링크)를 출력한 것입니다.
+JSP에 Java코드(File 클래스)를 활용하였습니다.
+
+============================================
+
+Enyotest 대쉬보드 데이터는 제가 파씽하여 Insert 하였습니다.
+(관련 코드는 EnyoTestInsert 폴더에 있습니다.)
+
+간략히 설명드리자면.. Enyo 자동화 테스트 후에는 컴포넌트별로 html 결과 파일이 생성되게 됩니다. 
+예) http://10.177.234.48/enyotest/report/Enyo_Test_20140122_010242/TestResult_run_all_tests_ButtonTest.html
+
+이렇게 컴포넌트별 테스트 결과 파일이 취합되면 제가 EnyoTestInsert(enyotest패키지)에서 만든 Java 프로그램이 실행됩니다.
+
+프로그램이 실행되면 먼저 개별 컴포넌트 결과를 하나의 html로 취합합니다.
+예) http://10.177.234.48/enyotest/report/Enyo_Test_20140221_010217.html
+
+그리고 그 내용을 파싱하여 DB에 insert 하는 것입니다.
+Table 구조도 단순하여 이해하기 쉬우실 겁니다. 

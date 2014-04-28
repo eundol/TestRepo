@@ -1,0 +1,38 @@
+/* Common classes applicable to multiple controls */
+
+.garnet {
+	z-index: 0;
+	.g-common-body-font;
+}
+.g-button-text {
+	font-weight: @g-button-font-weight;
+	font-size: @g-button-font-size;
+	font-style: @g-button-font-style;
+}
+.g-common-body-font {
+	font-family: @g-default-font-family;
+	font-size: @g-body-font-size;
+	color: @g-default-font-color;
+}
+.g-common-width-height-fit {
+	width: @g-width;
+	height: @g-height;
+}
+.g-common-hw-accelerated {
+	-webkit-transform: scale3d(1,1,1);
+}
+.g-common-user-select-none {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+
+	/* No support for these yet, use at own risk */
+	-o-user-select: none;
+	user-select: none;
+}
+.g-common-point-events-none {
+	pointer-events: none;
+}
+.g-common-circle-clip {
+	-webkit-clip-path: circle(160px, 160px, 160px);
+}

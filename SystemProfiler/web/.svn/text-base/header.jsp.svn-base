@@ -1,0 +1,1 @@
+<link rel="shorcut icon" href="./img/favicon.ico" type="image/x-icon">

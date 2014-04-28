@@ -1,0 +1,9 @@
+URL : http://profilevu.lge.com/tracker/ DB : tracker_infra
+
+2013년 2월부터 약 3개월간 Jira DB를 활용하여 구축한 페이지입니다.
+
+Dashboard(Gerrit)와 마찮가지로
+css는 bootstrap을 약간 적용하였고
+차트는 하이차트.. 나머지는 전부 날 html, jsp, js, css 입니다.
+
+Tracker 관련 쿼리는 Query참고 폴더에 모아두었습니다.
